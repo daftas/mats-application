@@ -1,0 +1,484 @@
+Apr 12, 2013 12:34:14 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 12, 2013 12:34:14 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 12, 2013 12:34:14 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@204f80d6 can not convert images, using java.
+Apr 12, 2013 12:34:14 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 12, 2013 12:34:14 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@78a1d1f4 can not convert images, using java.
+Apr 12, 2013 12:34:14 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 12, 2013 12:34:14 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@47df280b can not convert images, using java.
+Apr 12, 2013 12:34:14 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Apr 12, 2013 12:35:12 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://hln.be/: java.io.IOException: Broken pipe, probably cancelled pipeline
+Apr 12, 2013 12:38:13 PM rabbit.proxy.Tunnel$OneWayTunnel writeData
+WARNING: Tunnel to is closed, not writing data
+Apr 12, 2013 12:55:24 PM rabbit.proxy.Tunnel$OneWayTunnel writeData
+WARNING: Tunnel to is closed, not writing data
+Apr 12, 2013 1:12:04 PM rabbit.proxy.Tunnel$OneWayTunnel read
+WARNING: Got exception reading from tunnel: java.nio.channels.AsynchronousCloseException
+Apr 12, 2013 1:12:15 PM rabbit.handler.FilterHandler handleArray
+INFO: Bad HTML: rabbit.html.HtmlParseException: strange arglist: <prs.length;i++){var sp=prs[i];if(sp){var idx=prs[i].indexOf(>
+Apr 12, 2013 1:12:16 PM rabbit.handler.FilterHandler handleArray
+INFO: Bad HTML: rabbit.html.HtmlParseException: strange arglist: <scr>
+Apr 12, 2013 1:12:16 PM rabbit.handler.FilterHandler handleArray
+INFO: Bad HTML: rabbit.html.HtmlParseException: strange arglist: <prs.length;i++){var sp=prs[i];if(sp){var idx=prs[i].indexOf(>
+Apr 12, 2013 1:12:16 PM rabbit.handler.FilterHandler handleArray
+INFO: Bad HTML: rabbit.html.HtmlParseException: strange arglist: <scr>
+Apr 20, 2013 12:04:01 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 20, 2013 12:04:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 12:04:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@204f80d6 can not convert images, using java.
+Apr 20, 2013 12:04:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 12:04:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@78a1d1f4 can not convert images, using java.
+Apr 20, 2013 12:04:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 12:04:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@47df280b can not convert images, using java.
+Apr 20, 2013 12:04:01 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Apr 20, 2013 12:09:15 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://testingbot.com:82/index.php: java.io.IOException: Broken pipe, probably cancelled pipeline
+Apr 20, 2013 1:19:02 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 20, 2013 1:19:02 PM rabbit.cache.ncache.NCache readCacheIndex
+INFO: No cache index found: /tmp/rcache/cache.index, treating as empty cache
+Apr 20, 2013 1:19:02 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 1:19:02 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@48f0c0d3 can not convert images, using java.
+Apr 20, 2013 1:19:02 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 1:19:02 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@120c24c0 can not convert images, using java.
+Apr 20, 2013 1:19:02 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 1:19:02 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@5b40c281 can not convert images, using java.
+Apr 20, 2013 1:19:02 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Apr 20, 2013 3:16:01 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 20, 2013 3:16:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 3:16:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@7b2be1bd can not convert images, using java.
+Apr 20, 2013 3:16:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 3:16:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@32bf7190 can not convert images, using java.
+Apr 20, 2013 3:16:01 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 20, 2013 3:16:01 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@36b8bef7 can not convert images, using java.
+Apr 20, 2013 3:16:01 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Apr 28, 2013 3:49:40 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 28, 2013 3:49:40 PM rabbit.cache.ncache.NCache readCacheIndex
+INFO: No cache index found: /tmp/rcache/cache.index, treating as empty cache
+Apr 28, 2013 3:49:40 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 28, 2013 3:49:40 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@204f80d6 can not convert images, using java.
+Apr 28, 2013 3:49:40 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 28, 2013 3:49:40 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@78a1d1f4 can not convert images, using java.
+Apr 28, 2013 3:49:40 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 28, 2013 3:49:40 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@47df280b can not convert images, using java.
+Apr 28, 2013 3:49:40 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Apr 29, 2013 7:46:18 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Apr 29, 2013 7:46:18 PM rabbit.cache.ncache.NCache readCacheIndex
+INFO: No cache index found: /tmp/rcache/cache.index, treating as empty cache
+Apr 29, 2013 7:46:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 29, 2013 7:46:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@48f0c0d3 can not convert images, using java.
+Apr 29, 2013 7:46:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 29, 2013 7:46:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@120c24c0 can not convert images, using java.
+Apr 29, 2013 7:46:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Apr 29, 2013 7:46:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@5b40c281 can not convert images, using java.
+Apr 29, 2013 7:46:18 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 1:35:09 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 1:35:09 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:35:09 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@31221be2 can not convert images, using java.
+Oct 13, 2015 1:35:09 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:35:09 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@42110406 can not convert images, using java.
+Oct 13, 2015 1:35:09 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:35:09 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@531d72ca can not convert images, using java.
+Oct 13, 2015 1:35:09 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 1:36:49 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 1:36:49 PM rabbit.cache.ncache.NCache readCacheIndex
+INFO: No cache index found: /tmp/rcache/cache.index, treating as empty cache
+Oct 13, 2015 1:36:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:36:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@2e5d6d97 can not convert images, using java.
+Oct 13, 2015 1:36:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:36:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@7aec35a can not convert images, using java.
+Oct 13, 2015 1:36:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:36:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@67424e82 can not convert images, using java.
+Oct 13, 2015 1:36:49 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 1:39:41 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://google.com/: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 1:40:26 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@6d888aa1, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@489e670f
+Oct 13, 2015 1:40:26 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@58db1b6, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@256c6762
+Oct 13, 2015 1:40:48 PM rabbit.proxy.Tunnel$OneWayTunnel writeData
+WARNING: Tunnel to is closed, not writing data
+Oct 13, 2015 1:41:35 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: Failed to set up web connection to: http://twoo.dev/, cause: java.io.IOException: timeout
+Oct 13, 2015 1:47:17 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 1:47:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:47:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 1:47:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:47:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 1:47:18 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 1:47:18 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 1:47:18 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=11401&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AS1vcFeqSsYOzAYuerE%2Bg3V7UZjfyuPxZNXnVHCEM4ErxKQOs2yid90IJPZvyIkPXXAWXuLkLaS%2Fmuufbn7MW4FTnmAZzwPJOiz3eEobRpfc6FdWytT81Nd%2Fy54xeRMCxb4kT4%2FPqfaAy0q2MbSgm3C%2FvHeBP9s%2Ba6qezRyCXeX8F75OUUZIcXcZ26R6oGi33TvB%2BTL6MUaPdTROW2DdRkol7RGoPiTrp%2BPZ%2FkWjcL3U%2FV59sJsuYkvQQP3dwYNJiwoxj9QkpM1zEx0sLOPkFh4yNCpVH8%2Bz0e5haZcJqUOxCXjbq&up_filterId=filter-11606&up_num=20&up_isConfigured=true&up_isPopup=false&up_columnNames=issuekey%7Csummary%7Ccustomfield_10001&up_refresh=15&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afilter-results-gadget%2Fgadgets%2Ffilter-results-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10110&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AIJXY9uRikG%2FlQQPDy7u3t1EDOm9QmPceBu%2FwWOqXCIQnkcHcs%2Bf0Bf5nNAJTfuynM4WmcDeymGglmnFAWD8GyVa%2F%2FFLJInqfQnOjDQ%2BvNzOLyVvXMT6sU%2B%2BC8yWYs3y2g1f3XvhwlQr4rD3eoOkYyfTg86WgacyJI986mSmFI%2B3Eoso0b4y4Y1k8I%2FrefuiDpQyFsQS%2BhSJnIAIDhvlS7%2FjtCdm2MPnpPtbYQg705nfMbSexVEFnuaED9LEeBU9eTKiHlPUVwq3OvLZxIjzRPfOODkmSeqlf%2B9UcCtdcSI26%2BaIp&up_filterId=filter-11504&up_num=20&up_isConfigured=true&up_isPopup=false&up_columnNames=issuetype%7Cissuekey%7Cpriority%7Csummary%7Ccustomfield_10200&up_refresh=false&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afilter-results-gadget%2Fgadgets%2Ffilter-results-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=11201&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AOcjluEnEmmUbYH1RbO3JsCzcvhlLR7oWfqk1dJs1Rz3hal9yTrTiRXtZIcZwjQsipJEcmddlDxe2bVdNJPPrr9IkR3FUCt8T%2BuQU%2F63bl5efDRuX5Pe1kvV0w8SY68zpvOqFa%2BWjlLQ0ZqA%2B3T7QbnjyNk458qb5ODok9UG9lwIZsTw15J8%2B27g9ItP%2BfUpyyTVXsNVkSm%2FUQ8VEIrKHMeihytMETkFMgNY3Y2Ji5lDLvcRaWDFdioL2AolBbDXo5RLT7zeHw07BhfZTUHnqlvw9j%2FM1wUDqUvr4BQsoumvaNmxY&up_filterId=11402&up_num=10&up_isConfigured=true&up_isPopup=false&up_columnNames=--Default--&up_refresh=false&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afilter-results-gadget%2Fgadgets%2Ffilter-results-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10703&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AyFxNu6Xzu%2BMdBIEaXs4oB0gWg1EbNcg%2FtP9x2UxX021F1WYGqNYKM8ASnYCMhUVtGS3IJTeLMpiknd3BZfNS5wCgPSoU5R4q%2FSQJ3tF8JL%2BWF%2FW5RiEPxO4tXLVKUdsj5qydpbp4H%2FnU9AMGo9Cc%2FMV03F3dM%2BH%2BM29jOwC834X63YZAf8bmii%2B3YGM7%2FCFyb6%2FNNZnhkhFCgd63vKvtcp83Lz38LDDteESspdITCQd36AiMHvQwJQW3O5h3kqWsb3L5MpxhnKNIxNd8Vv22TkVpsW%2BC1oUljM14JjOphhXTNp7v4VfBuQUOTVvk%2FotH2MA2Qw%3D%3D&up_isConfigured=true&up_refresh=15&up_showCounts=true&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afavourite-filters-gadget%2Fgadgets%2Ffavourite-filters-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10111&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3A%2FgTVkAuUnb2xG98ZcY3dvddLemEImw1ahAYRcrzuN64b8wQtDgIVVc2G29FR84%2BLAS89FVLTKZdf6S%2F8nZp2GrpCdetM7Dud8zHI8yVS7Wt9ms1auqkMdsEy4Gzo2XECziH79St3V8Eds3Vhzka30%2B%2BG22YiOyQV0u83SUyBfEdF0eZoOk4EMCXYdmpY2aYb8OPP9hqB0%2FGX0aFzKqZOqxhJ5w%2BHY9zNXRv62nHoupc0Yj47o4856m23PJrpqMs73MqLnLdCkrrFFq7lvuS1llNNsxN976HIpj9SNOkWCiqh8xLW&up_filterId=filter-10220&up_num=10&up_isConfigured=true&up_isPopup=false&up_columnNames=priority%7Cissuekey%7Cassignee%7Csummary%7Ccustomfield_10200&up_refresh=false&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afilter-results-gadget%2Fgadgets%2Ffilter-results-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10502&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3A7xQGMMa0Qq3TCyCCjzBD01WBDRbPKae2tiRohOExWOathfx7OA6QP%2B2N0ueyOTLddysEP4IoCCUOresgxQj0p5qbP9QZKiEPEbTNafhmbne6qf5LI6YD1j41PImJ8FhsfOAF8wmppisLW2D%2BKFBCE3DvWgsYwd0rtJzbpXl%2F8jmLZRPJE4NffA0MIDfnae5FnKtrEHHr2uimDPPdSlecxXFJ0IWu9lhPp4zsCGy9Pa%2F9%2FV%2BBPZjIkNG9ar2aah8XJiohQEHghu4Hz45nz7KVcprFjTkJ7o%2FDVawjQmvXs41wTm7i&up_filterId=10404&up_num=10&up_isConfigured=true&up_isPopup=false&up_columnNames=--Default--&up_refresh=false&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Afilter-results-gadget%2Fgadgets%2Ffilter-results-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10113&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AnQsZigmY%2B8z%2B2hMhLx0Sv9VFd%2B3RQyVFCFGcvNN099pYD%2Bn893wGLyqMuok%2BtaOU45CpzlogGmNClu%2BTY3g7dfbIngBoguCoik85g6asP28%2FxI9uqf6%2BEUC3IUV7cpjnMDge3gERBSseAGNATy%2FkNSICHCTilfJ%2FTnsIgyDOdMJArSOEJr3THSvq2Fee%2FSyUq8xy2Cp0gifQuWQ6WEp%2FlvdZiXSDlSKOWaDHn8h%2BfcFe1ALpSpsajYDi8Cqbh0zM%2FXo51AtuJua2FE9s%2Fpj%2BIyiYKQMEs1frszSlOQ5y7UtnWYq8dCAGoxrG67%2F63JhMfy6J8Q%3D%3D&up_isConfigured=true&up_isReallyConfigured=true&up_title=Activity%2520Stream&up_titleRequired=true&up_numofentries=10&up_refresh=15&up_maxProviderLabelCharacters=50&up_rules=%257B%2522rules%2522%253A%255B%255D%257D&up_renderingContext=&up_keys=&up_itemKeys=&up_username=&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.streams.streams-jira-plugin%3Aactivitystream-gadget%2Fgadgets%2Factivitystream-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10114&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3ARYf8NnNAf2rp8UEp9EGvjX6U16BqN%2FGxI1jOkMnBhptkSUHo7tIggLAsqavEtNm5z2SoRMNDQc8U38OJx4JVgYL6RxkBs39ZAHqeTemvyVtRpqicDJoMUGAxsHvvQrMv%2FPGATmDFoRZMHtsgEH9OFfxUuyTKmRgFJ0TuN%2B4jSCV%2F9%2Fw4mL%2FqjUtMhqzJh2Uoqg%2BUnQPrwA3%2B7NZ9JqlfrxggwdXJayCmCOwM4RfAgGRd5sPqsDgbhANynA6mNvd4a3oh7ZUnMxPzRXQshwXmeuFwaC8%3D&up_isConfigured=true&up_refresh=15&up_isPopup=false&up_projectOrFilterId=filter-10224&up_statType=assignees&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Apie-chart-gadget%2Fgadgets%2Fpiechart-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=11402&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3A5LYa8oOZglv6vTpeeDny6ubGUhKnRXfoWaQO4sVztu4qEB66nfRqM%2BB2UaprYyvwdbyfEfN0g4lr7daB%2B4v2IMtTQLU8HiUo7HhkTTJMNdKdJ0rQrBX%2FMdGPHza55WOKfGrKNVlSLtnf6suHTNvKyotuCr6OpmQzikOi%2B7Iu5B2f769K%2Fkqc4V%2BqhUgkC4ceDNN7PnMTKA%2Bfy7QDWlc7ZsMW4Q%2FXYQ%2BY%2BUK1DPbccIALleuRmRwI2pvHszCfAq%2FwlvMuJgYK6v4cmAc9Mqqms4nmVJw%3D&up_isConfigured=true&up_refresh=15&up_isPopup=false&up_projectOrFilterId=filter-11506&up_statType=assignees&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Apie-chart-gadget%2Fgadgets%2Fpiechart-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:06:03 PM rabbit.handler.BaseHandler failed
+WARNING: BaseHandler: error handling request: http://bugs.netnoc.eu/plugins/servlet/gadgets/ifr?container=atlassian&mid=10112&country=US&lang=en&view=default&view-params=%7B%22writable%22%3A%22false%22%7D&st=atlassian%3AVBmIsCjhwGETs0XkSsoQslh9vf7BBN4atYxkvoLzagSatnSe3f18v4AzJWU15yH9io5n9tGHORKpu6atg6l7tEXRIUK%2BAz6h3pHW3Qs%2BGf3hA3wAo4yZBSvGYCc418qXx%2F4fg1vGfwhV9H%2FYlE27CXv6ia2Tj0gJXmXLV8S2Hq5cSEox6zE2IoocnG8Iw9TiIxHyY%2FnI7fuNjwsPYPHLClLABJIBCUug4wCwTckM7qfI3%2BsFAXueuGmZnFpmGg48pSTHLFnaau3GvkgUa4QRDXYC6H9TVBmZfDwjmPZT9U7ykPkCkdaP0Mctq2r3oV1xY30y6g%3D%3D&up_isConfigured=true&up_isPopup=false&up_refresh=15&up_projectOrFilterId=filter-10216&up_daysprevious=30&up_periodName=daily&up_versionLabel=all&up_isCumulative=false&up_showUnresolvedTrend=true&url=http%3A%2F%2Fbugs.netnoc.eu%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Acreated-vs-resolved-issues-chart-gadget%2Fgadgets%2Fcreatedvsresolved-gadget.xml&libs=auth-refresh: java.io.IOException: Broken pipe, probably cancelled pipeline
+Oct 13, 2015 2:08:24 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: Failed to set up web connection to: http://backend.twoo.dev/abuse/new, cause: java.io.IOException: timeout
+Oct 13, 2015 2:08:51 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: Failed to set up web connection to: http://backend.twoo.dev/abuse/new, cause: java.io.IOException: timeout
+Oct 13, 2015 2:08:58 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: Failed to set up web connection to: http://backend.twoo.dev/abuse/new/, cause: java.io.IOException: timeout
+Oct 13, 2015 3:04:05 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 3:04:06 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 3:04:06 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 3:04:06 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 3:04:06 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 3:04:06 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 3:04:06 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 3:04:06 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 3:05:04 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://localhost:2000/
+Oct 13, 2015 3:05:23 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@6264d927, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@3c1b0a75
+Oct 13, 2015 3:05:23 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@791af486, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@100265e6
+Oct 13, 2015 3:05:23 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@51d167a0, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@35fd974d
+Oct 13, 2015 3:05:23 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@303d2b9d, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@125dc6fc
+Oct 13, 2015 3:06:30 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@314d74ad, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@741cdc15
+Oct 13, 2015 3:06:30 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@3c24d5c4, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@60dc9cf2
+Oct 13, 2015 3:06:30 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@40abe213, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@484d87f1
+Oct 13, 2015 3:06:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://nddicpzupunsl/
+Oct 13, 2015 3:06:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://qgblwnzhlbuo/
+Oct 13, 2015 3:06:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://titervvmiujkpgc/
+Oct 13, 2015 3:07:21 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@3612938a, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@7f2f9fa4
+Oct 13, 2015 3:07:21 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@7b896264, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@2eb6ee75
+Oct 13, 2015 3:07:22 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@c1ab6ea, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@fcbca72
+Oct 13, 2015 3:07:22 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@390a2efa, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@72321f13
+Oct 13, 2015 3:10:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://ymhtxsbb/
+Oct 13, 2015 3:10:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://shtepdga/
+Oct 13, 2015 3:10:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://gjnqlfixgoiu/
+Oct 13, 2015 3:15:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://pbnekff/
+Oct 13, 2015 3:15:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://nzwmgga/
+Oct 13, 2015 3:15:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://fopwfwmuf/
+Oct 13, 2015 3:20:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://gacgyadfzuqn/
+Oct 13, 2015 3:20:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://lmiwmqxvpzls/
+Oct 13, 2015 3:20:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://fyozdih/
+Oct 13, 2015 3:25:21 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://idbomcmmgxygzrs/
+Oct 13, 2015 3:25:21 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://gfdtmspnjnwmkng/
+Oct 13, 2015 3:25:21 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://plmrtlydkpagej/
+Oct 13, 2015 3:30:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://bhojvtftypyfw/
+Oct 13, 2015 3:30:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://owtmytybbw/
+Oct 13, 2015 3:30:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://qrrkptmwwdpkja/
+Oct 13, 2015 3:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://batzuya/
+Oct 13, 2015 3:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://hlyobri/
+Oct 13, 2015 3:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://sepskhlr/
+Oct 13, 2015 3:40:13 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://csjhffqqkb/
+Oct 13, 2015 3:40:13 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://ooxxdjwpeycoui/
+Oct 13, 2015 3:40:13 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://guibqcirlox/
+Oct 13, 2015 3:45:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://kxcpubupvnnq/
+Oct 13, 2015 3:45:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://tfuyvwjng/
+Oct 13, 2015 3:45:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://bohfoizmgwntch/
+Oct 13, 2015 3:50:16 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://mjgzuwd/
+Oct 13, 2015 3:50:17 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://kztcimmjpjxpa/
+Oct 13, 2015 3:50:17 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://sspbjftsu/
+Oct 13, 2015 3:59:25 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://eijwwndv/
+Oct 13, 2015 3:59:25 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://cbfplmenrmwao/
+Oct 13, 2015 3:59:25 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://kkbwimc/
+Oct 13, 2015 3:59:27 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://fbtxjbviqupo/
+Oct 13, 2015 3:59:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://eoczjow/
+Oct 13, 2015 3:59:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://imxrpgajdaeu/
+Oct 13, 2015 3:59:42 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://uwbezyqwem/
+Oct 13, 2015 4:03:27 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://idriwnnjwfkojd/
+Oct 13, 2015 4:03:28 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://hrnqylqbrr/
+Oct 13, 2015 4:03:28 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://iwybspdef/
+Oct 13, 2015 4:04:47 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:04:47 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:04:47 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:04:47 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:04:47 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:04:47 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:04:47 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:04:47 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 4:08:10 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:08:11 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:08:11 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:08:11 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:08:11 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:08:11 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:08:11 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:08:11 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 4:11:48 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:11:48 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:11:48 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:11:48 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:11:48 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:11:48 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:11:48 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:11:48 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 4:12:18 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://localhost:2000/
+Oct 13, 2015 4:13:49 PM org.khelekore.rnio.impl.SingleSelectorRunner updateSelectionKey
+WARNING: channel: java.nio.channels.SocketChannel[closed] is closed, wont register: handler: rabbit.httpio.HttpHeaderReader@25a73706, updater: org.khelekore.rnio.impl.SingleSelectorRunner$1@4dc32d4d
+Oct 13, 2015 4:31:48 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:31:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:31:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:31:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:31:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:31:49 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:31:49 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:31:49 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 4:32:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://localhost:2000/
+Oct 13, 2015 4:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://qvlbnavmuoacr/
+Oct 13, 2015 4:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://vqpoviizp/
+Oct 13, 2015 4:35:15 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://ctmqjdhkbw/
+Oct 13, 2015 4:36:50 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:36:51 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:36:51 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:36:51 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:36:51 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:36:51 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:36:51 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:36:51 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 4:37:32 PM rabbit.proxy.Connection webConnectionSetupFailed
+WARNING: java.net.UnknownHostException: unknown host: http://localhost:2000/
+Oct 13, 2015 4:49:42 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 4:49:42 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:49:42 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 4:49:42 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:49:42 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 4:49:42 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 4:49:42 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 4:49:43 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 5:07:59 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 5:08:00 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:08:00 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@1a86f2f1 can not convert images, using java.
+Oct 13, 2015 5:08:00 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:08:00 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 5:08:00 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:08:00 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6d5380c2 can not convert images, using java.
+Oct 13, 2015 5:08:00 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 5:12:42 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 5:12:43 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:12:43 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 5:12:43 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:12:43 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 5:12:43 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:12:43 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 5:12:43 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
+Oct 13, 2015 5:15:23 PM rabbit.proxy.ProxyLogger setup
+INFO: Log level set to: INFO
+Oct 13, 2015 5:15:23 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:15:23 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@25f38edc can not convert images, using java.
+Oct 13, 2015 5:15:23 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:15:23 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@28c97a5 can not convert images, using java.
+Oct 13, 2015 5:15:23 PM rabbit.handler.convert.ExternalProcessConverter <init>
+WARNING: convert -/usr/bin/gm- not found, is your path correct?
+Oct 13, 2015 5:15:23 PM rabbit.handler.ImageHandler setup
+WARNING: imageConverter: rabbit.handler.convert.ExternalProcessConverter@6659c656 can not convert images, using java.
+Oct 13, 2015 5:15:24 PM rabbit.proxy.HttpProxy setConfig
+INFO: RabbIT proxy version 4.11: Configuration loaded: ready for action.
