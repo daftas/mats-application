@@ -6,8 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Sauce' => array($vendorDir . '/sauce/sausage-installer/src', $vendorDir . '/sauce/sausage/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
-    'ParaTest' => array($vendorDir . '/brianium/paratest/src'),
-    'Habitat' => array($vendorDir . '/brianium/habitat/src'),
 );
