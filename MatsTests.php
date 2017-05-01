@@ -15,32 +15,31 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-class MatsTests
+
+require_once('vendor/appium/php-client/PHPUnit/Extensions/AppiumTestCase.php');
+require_once('vendor/appium/php-client/PHPUnit/Extensions/AppiumTestCase/Element.php');
+
+class MatsTests extends PHPUnit_Extensions_AppiumTestCase
 {
-    public function MatsTests extends PHPUnit_Framework_Assert
-	{
+    public static $browsers = array(
+        array(
+            'local' => true,
+            'port' => 4723,
+            'browserName' => '',
+            'desiredCapabilities' => array(
+                'app' => APP_PATH
+                'browsername' => 'Chrome',
+                'deviceName' => 'android-emulator',
+                'platformVersion' => '4.4',
+                'platformName' => 'Android'
+            )
+        )
+    );
 
-        );
-		public function elemsByTag($tag)
-        {
-            return $this->elements($this->using('class name')->value($tag));
-        }
-		public function populate()
-        {
-            $elems = $this->elemsByTag('UIATextField');
-            foreach ($elems as $elem) {
-                $randNum = rand(0, 10);
-                $elem->value($randNum);
-                $this->numValues[] = $randNum;
-            }
-        }
-		public function testUiComputation()
-        {
-            $this->populate();
-            $buttons = $this->elemsByTag('UIAButton');
-            $buttons[0]->click();
-            $texts = $this->elemsByTag('UIAStaticText');
-            $this->assertEquals(array_sum($this->numValues), (int)($texts[0]->text()));
-        }
-        ?>
+    public function helloTest()
+    {
+        $element = $this->byAccessibilityId('Element on screen');
 
+        $this->assertInstanceOf('PHPUnit_Extensions_AppiumTestCase_Element', $element);
+    }
+}
