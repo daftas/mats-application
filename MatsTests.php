@@ -27,7 +27,7 @@ class MatsTests extends PHPUnit_Extensions_AppiumTestCase
             'port' => 4723,
             'browserName' => '',
             'desiredCapabilities' => array(
-                'app' => APP_PATH
+                'app' => APP_PATH,
                 'browsername' => 'Chrome',
                 'deviceName' => 'android-emulator',
                 'platformVersion' => '4.4',
