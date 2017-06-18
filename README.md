@@ -8,21 +8,21 @@ Mobile Application Testing Solution
 
 Aplikacija veikia leidžiant MatsApp.php failą, kuris rodo šį failą naršyklėje .html formatu, naudojant vidinį serverį (localhost) ir .htaccess veikimo principą.
 
-### [Pirmoji prototipo funkcija](https://github.com/daftas/mats-application/master/helloworld.php)
+### [Pirmoji prototipo funkcija](https://github.com/daftas/mats-application/blob/master/helloworld.php)
 
 ### Papildomi dokumentai, kuriuose yra parašytas prototipo programinis kodas:
 
- [**MatsTests.php**](https://github.com/daftas/mats-application/master/MatsTests.php)
+ [**MatsTests.php**](https://github.com/daftas/mats-application/blob/master/MatsTests.php)
 
 Programinis kodas, kuriame  yra parašyti visi automatiniai testai kurie yra atliekamio. Jie padeda suskaičiuoti projekto kaštus.
 
-[**MatsElements.php**](https://github.com/daftas/mats-application/master/MatsElements.php)
+[**MatsElements.php**](https://github.com/daftas/mats-application/blob/master/MatsElements.php)
 
 Programinis kodas, kuriame yra sudėti visi prototipo automatinių testų elementai ir objektinės klasės. Šis failas yra naudojamas automatinių testų funkcijoms ir rezultatams pagrįsti. 
 
 
 ### Prototipe naudojamos bibliotekos ir kiti gamintojai (Libraries and Vendors)
 
-[**composer.phar**](https://github.com/daftas/mats-application/master/composer.phar)
+[**composer.lock**](https://github.com/daftas/mats-application/blob/master/composer.lock)
 
-Composer tipo failas, kuriame yra sudėtos visos papildomos aplikacijos, palaikančios protipo veikimą ir palengvinančios jo darbą. 
+Composer tipo failas, kuriame yra sugeneruotos visos papildomos aplikacijos ir jų būsena (aplikacijų versijavimo _hash_), palaikančios protipo veikimą ir palengvinančios jo darbą. 
