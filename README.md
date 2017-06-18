@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# MATS Aplikacijos prototipas
 
-You can use the [editor on GitHub](https://github.com/daftas/mats-application/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Mobile Application Testing Solution 
+[MATS yra pasiekiama naudotojant šią nuorodą](https://github.com/daftas/mats-application/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# MATS veikimo principas
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Aplikacija veikia leidžiant MatsApp.php failą, kuris rodo šį failą naršyklėje .html formatu, naudojant vidinį serverį (localhost) ir .htaccess veikimo principą.
 
-```markdown
-Syntax highlighted code block
+### [Pirmoji prototipo funkcija](https://github.com/daftas/mats-application/master/helloworld.php)
 
-# Header 1
-## Header 2
-### Header 3
+### Papildomi dokumentai, kuriuose yra parašytas prototipo programinis kodas:
 
-- Bulleted
-- List
+ [**MatsTests.php**](https://github.com/daftas/mats-application/master/MatsTests.php)
 
-1. Numbered
-2. List
+Programinis kodas, kuriame  yra parašyti visi automatiniai testai kurie yra atliekamio. Jie padeda suskaičiuoti projekto kaštus.
 
-**Bold** and _Italic_ and `Code` text
+[**MatsElements.php**](https://github.com/daftas/mats-application/master/MatsElements.php)
 
-[Link](url) and ![Image](src)
-```
+Programinis kodas, kuriame yra sudėti visi prototipo automatinių testų elementai ir objektinės klasės. Šis failas yra naudojamas automatinių testų funkcijoms ir rezultatams pagrįsti. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Prototipe naudojamos bibliotekos ir kiti gamintojai (Libraries and Vendors)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/daftas/mats-application/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[**composer.phar**](https://github.com/daftas/mats-application/master/composer.phar)
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Composer tipo failas, kuriame yra sudėtos visos papildomos aplikacijos, palaikančios protipo veikimą ir palengvinančios jo darbą. 
