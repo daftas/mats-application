@@ -6,7 +6,7 @@ Mobile Application Testing Solution
 
 # MATS veikimo principas
 
-Aplikacija veikia leidžiant MatsApp.php failą, kuris rodo šį failą naršyklėje .html formatu, naudojant vidinį serverį (localhost) ir .htaccess veikimo principą.
+Aplikacija veikia leidžiant MatsApp.php failą, kuris rodo šį failą naršyklėje .html formatu, naudojant vidinį serverį (localhost) ir .htaccess veikimo principą. Šis failas parodo galinį rezultatą vartotojui ir atlieka paskutiniuosius skaičiavimus.
 
 ### [Pirmoji prototipo funkcija](https://github.com/daftas/mats-application/blob/master/helloworld.php)
 
@@ -14,7 +14,7 @@ Aplikacija veikia leidžiant MatsApp.php failą, kuris rodo šį failą naršykl
 
  [**MatsTests.php**](https://github.com/daftas/mats-application/blob/master/MatsTests.php)
 
-Programinis kodas, kuriame  yra parašyti visi automatiniai testai kurie yra atliekamio. Jie padeda suskaičiuoti projekto kaštus.
+Programinis kodas, kuriame yra parašyti visi atliekmi automatiniai testai. Jie padeda suskaičiuoti projekto kaštus.
 
 [**MatsElements.php**](https://github.com/daftas/mats-application/blob/master/MatsElements.php)
 
