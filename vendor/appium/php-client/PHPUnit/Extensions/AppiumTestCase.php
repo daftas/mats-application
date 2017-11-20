@@ -14,10 +14,9 @@
  * limitations under the License.
  **/
 
-require_once('PHPUnit/Extensions/AppiumTestCase/SessionStrategy/Isolated.php');
-require_once('PHPUnit/Extensions/AppiumTestCase/Element.php');
-require_once('PHPUnit/Extensions/AppiumTestCase/MultiAction.php');
-require_once('PHPUnit/Extensions/AppiumTestCase/TouchAction.php');
+require_once('AppiumTestCase/Element.php');
+require_once('AppiumTestCase/MultiAction.php');
+require_once('AppiumTestCase/TouchAction.php');
 
 
 abstract class PHPUnit_Extensions_AppiumTestCase extends PHPUnit_Extensions_Selenium2TestCase

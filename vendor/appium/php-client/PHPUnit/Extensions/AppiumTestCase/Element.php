@@ -15,7 +15,6 @@
  **/
 
 class PHPUnit_Extensions_AppiumTestCase_Element
-    extends PHPUnit_Extensions_Selenium2TestCase_Element
 {
     /**
      * @return \self

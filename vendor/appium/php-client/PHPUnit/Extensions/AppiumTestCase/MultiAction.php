@@ -14,8 +14,8 @@
  * limitations under the License.
  **/
 
-require_once('PHPUnit/Extensions/AppiumTestCase/Driver.php');
-require_once('PHPUnit/Extensions/AppiumTestCase/TouchAction.php');
+require_once('Driver.php');
+require_once('TouchAction.php');
 
 
 class PHPUnit_Extensions_AppiumTestCase_MultiAction

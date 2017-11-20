@@ -14,10 +14,9 @@
  * limitations under the License.
  **/
 
-require_once('PHPUnit/Extensions/AppiumTestCase/Session.php');
+require_once('Session.php');
 
 class PHPUnit_Extensions_AppiumTestCase_Driver
-    extends PHPUnit_Extensions_Selenium2TestCase_Driver
 {
     private $seleniumServerUrl;
     private $seleniumServerRequestsTimeout;

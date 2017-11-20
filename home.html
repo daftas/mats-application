@@ -11,13 +11,27 @@
 <br><br><br>
 <form action="score.php" method="get">
     No. of people working in the project (developers only):
-    <input type="text" name="people"><br><br>
+    <input type="text" id="people" name="people"><br><br>
     Lifecycle of the project (in working days):
-    <input type="text" name="project"><br><br>
+    <input type="text" id="project" name="project"><br><br>
     Select your project type:
     <input type="radio" name="project_type" value="commercial_project" checked> Commercial Project
     <input type="radio" name="project_type" value="internal_project"> Internal project<br>
-    <input type="submit">
+    <input type="submit" onclick="validateNumeric()">
+    <p id="submit_form"></p>
 </form>
 </body>
+<script>
+    function validateNumeric() {
+        var x, text;
+        x = document.getElementById("people").value;
+
+        // If x is Not a Number or less than one or greater than 10
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("submit_form").innerHTML = text;
+</script>
 </html>

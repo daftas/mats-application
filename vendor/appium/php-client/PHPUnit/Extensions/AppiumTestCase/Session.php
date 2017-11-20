@@ -14,10 +14,9 @@
  * limitations under the License.
  **/
 
-require_once('PHPUnit/Extensions/AppiumTestCase/SessionCommand/Context.php');
+require_once('SessionCommand/Context.php');
 
 class PHPUnit_Extensions_AppiumTestCase_Session
-    extends PHPUnit_Extensions_Selenium2TestCase_Session
 {
     /**
      * @var string  the base URL for this session,

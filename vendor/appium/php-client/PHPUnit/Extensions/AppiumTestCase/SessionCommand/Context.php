@@ -15,7 +15,6 @@
  **/
 
  class PHPUnit_Extensions_AppiumTestCase_SessionCommand_Context
-    extends PHPUnit_Extensions_Selenium2TestCase_Command
 {
     public function __construct($name, $commandUrl)
     {
