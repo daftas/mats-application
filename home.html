@@ -10,13 +10,24 @@
 <h2>Fill out form and click submit</h2>
 <br><br><br>
 <form action="score.php" method="get">
-    No. of people working in the project (developers only):
+    No. of developers working in the project:
     <input type="text" id="people" name="people"><br><br>
     Lifecycle of the project (in working days):
     <input type="text" id="project" name="project"><br><br>
-    Select your project type:
+    Projected time to spend on testing (in working days):
+    <input type="text" id="testing" name="testing"><br><br>
+    Project amount of budget to spend on testing (in % of the full project budget):
+    <input type="text" id="budget" name="budget"><br><br>
+    Approx. number of user stories in the app making:
+    <input type="text" id="story" name="story"><br><br>
+    <p>Select type of the project</p>
     <input type="radio" name="project_type" value="commercial_project" checked> Commercial Project
     <input type="radio" name="project_type" value="internal_project"> Internal project<br>
+    <p>Select all App Stores for which the project is developed</p>
+    <input type="checkbox" name="appstore" value="ios_app"> Apple Store (iOS)<br>
+    <input type="checkbox" name="appstore" value="android_app"> Google Store (Android)<br>
+    <input type="checkbox" name="appstore" value="win_app"> Windows Store (Windows)<br>
+    <p></p><br><br>
     <input type="submit" onclick="validateNumeric()">
     <p id="submit_form"></p>
 </form>
@@ -27,11 +38,12 @@
         x = document.getElementById("people").value;
 
         // If x is Not a Number or less than one or greater than 10
-        if (isNaN(x) || x < 1 || x > 10) {
+        if (isNaN(x)) {
             text = "Input not valid";
         } else {
             text = "Input OK";
         }
         document.getElementById("submit_form").innerHTML = text;
+    }
 </script>
 </html>
