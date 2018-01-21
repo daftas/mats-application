@@ -9,8 +9,8 @@ class matsMonteCarlo extends matsGeneral
 {
 
     /**
-     * @param $min
-     * @param $max
+     * @param integer $min
+     * @param integer $max
      * @return mixed
      */
     private function createRandomFloat($min, $max)
@@ -19,7 +19,7 @@ class matsMonteCarlo extends matsGeneral
     }
 
     /**
-     * @param $number
+     * @param integer $number
      * @return float|int
      */
     public function generateMCValueLow($number)

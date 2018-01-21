@@ -80,16 +80,16 @@ class matsGeneral
                     <br>App Stores for your application: %s.";
         return $pattern;
     }
+
     /**
      * @return string
      */
     public function getAppStore()
     {
         $a = array();
-        $appstore = array("ios", "android", "other");
+        $appstore = array("iOS", "Android", "Other");
         foreach ($appstore as $app)
         {
-            $this->getFromInput($app);
             if (isset($_GET[$app]))
             {
                 array_push($a, $app);
