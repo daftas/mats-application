@@ -9,27 +9,28 @@
 <br>
 <h2>Fill out form and click submit</h2>
 <br><br><br>
-<form action="score.php" method="get">
+<form action="matsDisplay.php" method="get">
     No. of developers working in the project:
     <input type="text" id="people" name="people"><br><br>
     Lifecycle of the project (in working days):
     <input type="text" id="project" name="project"><br><br>
     Projected time to spend on testing (in working days):
     <input type="text" id="testing" name="testing"><br><br>
-    Project amount of budget to spend on testing (in % of the full project budget):
-    <input type="text" id="budget" name="budget"><br><br>
     Approx. number of user stories in the app making:
     <input type="text" id="story" name="story"><br><br>
     <p>Select type of the project</p>
     <input type="radio" name="project_type" value="commercial_project" checked> Commercial Project
     <input type="radio" name="project_type" value="internal_project"> Internal project<br>
+    <p>Select project complexity</p>
+    <input type="radio" name="complexity" value="low"> Low (relatively easy)<br>
+    <input type="radio" name="complexity" value="medium" checked> Medium (moderate)<br>
+    <input type="radio" name="complexity" value="high"> High (relatively complex)<br>
     <p>Select all App Stores for which the project is developed</p>
-    <input type="checkbox" name="appstore" value="ios_app"> Apple Store (iOS)<br>
-    <input type="checkbox" name="appstore" value="android_app"> Google Store (Android)<br>
-    <input type="checkbox" name="appstore" value="win_app"> Windows Store (Windows)<br>
-    <p></p><br><br>
-    <input type="submit" onclick="validateNumeric()">
-    <p id="submit_form"></p>
+    <input type="checkbox" name="ios" value="1"> Apple Store (iOS)<br>
+    <input type="checkbox" name="android" value="1"> Google Store (Android)<br>
+    <input type="checkbox" name="other" value="1"> Other<br>
+    <br><br>
+    <input type="submit" onclick="validateNumeric()"><br>
 </form>
 </body>
 <script>
