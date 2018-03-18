@@ -99,17 +99,50 @@ class matsGeneral
     }
 
     /**
+     * @return float|int
+     */
+    public function getAppStorePoints()
+    {
+        $a = array();
+        $appstore = array("iOS", "Android", "Other");
+        foreach ($appstore as $app)
+        {
+            if (isset($_GET[$app]))
+            {
+                $value = $_GET[$app];
+                array_push($a, $value);
+            }
+        }
+        return array_sum($a);
+    }
+
+    /**
      * @return string
      */
     public function getLifecycle()
     {
-        if ($_GET["lifecycle"] = "supportable")
+        if ($_GET["lifecycle"] === "supportable")
         {
            return "Supportable";
         }
         else
         {
             return "Non-supportable";
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getLifecyclePoints()
+    {
+        if ($_GET["lifecycle"] === "supportable")
+        {
+            return 5;
+        }
+        else
+        {
+            return 1;
         }
     }
 

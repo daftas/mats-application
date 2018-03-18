@@ -34,12 +34,9 @@ $matsScore = new matsScore();
 <body>
 <table>
     <?php
-    print ("<tr><td><b>Investment in product quality: </b></td><td><p>{$matsScore->getTestingInvestment(
-            $matsGeneral->getFromInput("people"), 
-            $matsGeneral->getFromInput("project"),
-            $matsGeneral->getFromInput("testing"))} %</p></td></tr>
-<tr><td><b>Estimated Social Return on Investment: </b></td><td><p>42 %</p></td></tr>
-<tr><td><b>Estimated break even period: </b></td><td><p>150 days</p></td></tr>
+    print ("<tr><td><b>Complexity Points: </b></td><td><p>{$matsScore->calculateComplexity()}</p></td></tr>
+<tr><td><b>Estimated time on the project: </b></td><td><p>{$matsScore->calculateEstimate()}</p></td></tr>
+<tr><td><b>Story points re-calculated: </b></td><td><p>{$matsScore->calculateStoryPoints()}</p></td></tr>
 <tr><td><b>Resource cost ratio (Manual vs Automated): </b></td><td><p>1.25 : 1</p></td></tr>");
     ?>
 </table>

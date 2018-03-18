@@ -19,53 +19,32 @@ class matsMonteCarlo extends matsGeneral
     }
 
     /**
+     * @return float|int
+     */
+    public function getComplexity()
+    {
+        $lc = $this->getLifecyclePoints();
+        $platform = $this->getAppStorePoints();
+        $complexity = ($lc + $platform) / 10;
+        return $complexity;
+    }
+
+    /**
      * @param integer $number
      * @return float|int
      */
-    public function generateMCValueLow($number)
+    public function generateMCValue($number)
     {
         $a = array();
         $i = 0;
-        while ($i < 1000){
-            $r = round(($number*($this->createRandomFloat(0.8,1.2))),2);
+        $complexity = $this->getComplexity();
+        echo $complexity;
+        while ($i < 10000){
+            $r = round(($number*($this->createRandomFloat((1.01-$complexity),(1.01+$complexity)))),2);
             array_push($a, $r);
             $i++;
         }
-        $numberMC = round((array_sum($a)/1000),2);
-        return $numberMC;
-    }
-
-    /**
-     * @param $number
-     * @return float|int
-     */
-    public function generateMCValueMedium($number)
-    {
-        $a = array();
-        $i = 0;
-        while ($i < 1000){
-            $r = round(($number*($this->createRandomFloat(0.5,1.5))),2);
-            array_push($a, $r);
-            $i++;
-        }
-        $numberMC = round((array_sum($a)/1000),2);
-        return $numberMC;
-    }
-
-    /**
-     * @param $number
-     * @return float|int
-     */
-    public function generateMCValueHigh($number)
-    {
-        $a = array();
-        $i = 0;
-        while ($i < 1000){
-            $r = round(($number*($this->createRandomFloat(0.2,1.8))),2);
-            array_push($a, $r);
-            $i++;
-        }
-        $numberMC = round((array_sum($a)/1000),2);
+        $numberMC = round((array_sum($a)/10000),2);
         return $numberMC;
     }
 

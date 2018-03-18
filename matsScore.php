@@ -9,50 +9,33 @@ class matsScore extends matsGeneral
 
 {
 
-    /**
-     * @param integer $pe
-     * @param integer $pr
-     * @param integer $te
-     * @return float
-     */
-    public function getTestingInvestment($pe, $pr, $te)
+    public function calculateComplexity()
     {
         $matsMonteCarlo = new matsMonteCarlo();
-        $pe = $matsMonteCarlo->generateMCValueMedium($pe);
-        $pr = $matsMonteCarlo->generateMCValueMedium($pr);
-        $te = $matsMonteCarlo->generateMCValueMedium($te);
-        $result = round(((($pe*$te)/($pe*$pr))*100));
-        return $result;
+        return $matsMonteCarlo->getComplexity();
     }
 
     /**
-     * @param integer $testingTime
-     * @param integer $userStories
+     * Calculates the estimate for the project
+     *
      * @return float|int
      */
-    public function getDays($testingTime, $userStories)
+    public function calculateEstimate()
+    {
+        $bestCaseEst = $this->getFromInput("est_bc");
+        $estimate = $this->getFromInput("est");
+        $worstCaseEst = $this->getFromInput("est_wc");
+        $threePointEst = (2*$bestCaseEst + 4*$estimate + 2*$worstCaseEst)/6;
+        return $threePointEst;
+    }
+
+    /**
+     *
+     */
+    public function calculateStoryPoints()
     {
         $matsMonteCarlo = new matsMonteCarlo();
-        $mcValues = array();
-        $dist = $testingTime / $userStories;
-        $userStoriesTemp = $userStories;
-        while ($userStoriesTemp != 0) {
-            $nMC = $matsMonteCarlo->generateMCValueLow($dist);
-            array_push($mcValues, $nMC);
-            $userStoriesTemp--;
-        }
-        $mcValuesTotal = (array_sum($mcValues)) / $userStories;
-        return $mcValuesTotal;
+        $story = $_GET["story_mid"];
+        return $matsMonteCarlo->generateMCValue($story);
     }
-
-    public function getSROIValue()
-    {
-
-    }
-
-    public function getAutoManualRatio()
-    {
-
-    }
-
 }
