@@ -10,22 +10,21 @@
 <h2>Fill out form and click submit</h2>
 <br><br><br>
 <form action="matsDisplay.php" method="get">
-    No. of developers working in the project:
-    <input type="text" id="people" name="people"><br><br>
-    Lifecycle of the project (in working days):
-    <input type="text" id="project" name="project"><br><br>
-    Projected time to spend on testing (in working days):
-    <input type="text" id="testing" name="testing"><br><br>
-    Approx. number of user stories in the app making:
-    <input type="text" id="story" name="story"><br><br>
-    <p>Select project complexity</p>
-    <input type="radio" name="complexity" value="low"> Low (relatively easy)<br>
-    <input type="radio" name="complexity" value="medium" checked> Medium (moderate)<br>
-    <input type="radio" name="complexity" value="high"> High (relatively complex)<br>
-    <p>Select all App Stores for which the project is developed</p>
-    <input type="checkbox" name="iOS" value="1"> Apple Store (iOS)<br>
+    <p><b>Select all platforms for which the project is developed</b></p>
+    <input type="checkbox" name="iOS" value="3"> Apple Store (iOS)<br>
     <input type="checkbox" name="Android" value="1"> Google Store (Android)<br>
-    <input type="checkbox" name="Other" value="1"> Other<br>
+    <input type="checkbox" name="Other" value="2"> Other<br>
+    <p><b>Lifecycle of the application:</b></p>
+    <input type="radio" name="lifecycle" value="supportable" checked> Supportable<br>
+    <input type="radio" name="lifecycle" value="nonsupportable"> Non-supportable<br>
+    <p><b>Approx. number of user stories in the app making:</b></p>
+    Low (relatively easy) <input type="text" name="story_min"> <br><br>
+    Medium (moderate) <input type="text" name="story_mid"> <br><br>
+    High (relatively complex) <input type="text" name="story_max"> <br><br>
+    <p><b>Time estimation:</b></p>
+    Best-case scenario <input type="text" name="est_bc"> <br><br>
+    Most-likely scenario <input type="text" name="est"> <br><br>
+    Worst-case scenario <input type="text" name="est_wc"> <br><br>
     <br><br>
     <input type="submit" onclick="validateNumeric()"><br>
 </form>
@@ -34,8 +33,6 @@
     function validateNumeric() {
         var x, text;
         x = document.getElementById("people").value;
-
-        // If x is Not a Number or less than one or greater than 10
         if (isNaN(x)) {
             text = "Input not valid";
         } else {

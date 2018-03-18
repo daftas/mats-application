@@ -23,12 +23,10 @@ $matsScore = new matsScore();
     <?php
     print(sprintf(
         $matsGeneral->getPattern(),
-        $matsGeneral->getFromInput("people"),
-        $matsGeneral->getFromInput("project"),
-        $matsGeneral->getFromInput("testing"),
-        $matsGeneral->getFromInput("story"),
-        $matsGeneral->getFromInput("complexity"),
-        $matsGeneral->getAppStore()));
+        $matsGeneral->getAppStore(),
+        $matsGeneral->getLifecycle(),
+        $matsGeneral->getTotalStories(),
+        $matsGeneral->getFromInput("est")));
     ?>
     </h5>
     <hr>

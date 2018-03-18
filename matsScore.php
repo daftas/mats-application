@@ -9,15 +9,6 @@ class matsScore extends matsGeneral
 
 {
 
-//switch($project_type){
-//    case $project_type === "commercial_project":
-//        $project_type = "Komercinis projektas";
-//        break;
-//    case $project_type === "internal_project":
-//        $project_type = "Vidinis projektas";
-//        break;
-//}
-
     /**
      * @param integer $pe
      * @param integer $pr

@@ -19,8 +19,8 @@ class matsGeneral
     
     public function setUp()
     {
-        $this->setMatsScore(new matsScore($this));
-        $this->setMatsMonteCarlo(new matsMonteCarlo($this));
+        $this->setMatsScore(new matsScore);
+        $this->setMatsMonteCarlo(new matsMonteCarlo);
     }
     
     /**
@@ -72,12 +72,11 @@ class matsGeneral
      */
     public function getPattern()
     {
-        $pattern = "You have %s people working;
-                    <br>Your project have %s working days in total;
-                    <br>Your project have %s of project working days dedicated to testing;
-                    <br>Your estimated number of user stories in project is %s;
-                    <br>Your project is %s in complexity;
-                    <br>App Stores for your application: %s.";
+        $pattern = "Platforms for your application: %s.;
+                    <br>Lifecycle of your project is %s;
+                    <br>You have entered %s stories in total;
+                    <br>Your most likely time estimation is %s;
+                    <br>";
         return $pattern;
     }
 
@@ -97,5 +96,28 @@ class matsGeneral
         }
         $appStore = implode(", ", $a);
         return $appStore;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLifecycle()
+    {
+        if ($_GET["lifecycle"] = "supportable")
+        {
+           return "Supportable";
+        }
+        else
+        {
+            return "Non-supportable";
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotalStories()
+    {
+        return $_GET["story_min"] + $_GET["story_mid"] + $_GET["story_max"];
     }
 }
