@@ -29,6 +29,33 @@ class matsMonteCarlo extends matsGeneral
         return $complexity;
     }
 
+
+    /**
+     * @return float
+     */
+    public function calculateMonteCarloWeight()
+    {
+        $matsScore = new MatsScore;
+        $value = $matsScore->calculateTestingEffort();
+        switch ($value)
+        {
+            case ($value = 0.15):
+                return 0.2;
+                break;
+            case ($value = 0.4):
+                return 0.5;
+                break;
+            default;
+                return 0.8;
+        }
+    }
+
+    public function getMonteCarloNumber($number)
+    {
+        $mcWeight = $this->calculateMonteCarloWeight();
+        return round(($number*($this->createRandomFloat((1-$mcWeight),(1+$mcWeight)))),2);
+    }
+
     /**
      * @param integer $number
      * @return float|int
@@ -37,13 +64,14 @@ class matsMonteCarlo extends matsGeneral
     {
         $a = array();
         $i = 0;
-        $complexity = $this->getComplexity();
-        while ($i < 10000){
-            $r = round(($number*($this->createRandomFloat((1.01-$complexity),(1.01+$complexity)))),2);
+        $mcWeight = $this->calculateMonteCarloWeight();
+
+        while ($i < 1000){
+            $r = round(($number*($this->createRandomFloat((1-$mcWeight),(1+$mcWeight)))),2);
             array_push($a, $r);
             $i++;
         }
-        $numberMC = round((array_sum($a)/10000),2);
+        $numberMC = round((array_sum($a)/1000),2);
         return $numberMC;
     }
 

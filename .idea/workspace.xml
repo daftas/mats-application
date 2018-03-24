@@ -4,8 +4,6 @@
     <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/matsDisplay.php" afterPath="$PROJECT_DIR$/matsDisplay.php" />
-      <change beforePath="$PROJECT_DIR$/matsGeneral.php" afterPath="$PROJECT_DIR$/matsGeneral.php" />
-      <change beforePath="$PROJECT_DIR$/matsHome.html" afterPath="$PROJECT_DIR$/matsHome.html" />
       <change beforePath="$PROJECT_DIR$/matsMonteCarlo.php" afterPath="$PROJECT_DIR$/matsMonteCarlo.php" />
       <change beforePath="$PROJECT_DIR$/matsScore.php" afterPath="$PROJECT_DIR$/matsScore.php" />
     </list>
@@ -27,8 +25,8 @@
       <file leaf-file-name="matsScore.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matsScore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state relative-caret-position="384">
+              <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -37,11 +35,11 @@
       <file leaf-file-name="matsDisplay.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsDisplay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state relative-caret-position="350">
+              <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
-                <marker date="1521893391125" expanded="true" signature="247:266" ph="..." />
+                <marker date="1521897742331" expanded="true" signature="247:266" ph="..." />
               </folding>
             </state>
           </provider>
@@ -50,8 +48,8 @@
       <file leaf-file-name="matsMonteCarlo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsMonteCarlo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="-143">
+              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="e#7#78#0#PHP" expanded="true" />
               </folding>
@@ -62,8 +60,8 @@
       <file leaf-file-name="matsGeneral.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsGeneral.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="207" column="7" lean-forward="true" selection-start-line="207" selection-start-column="7" selection-end-line="207" selection-end-column="7" />
+            <state relative-caret-position="-575">
+              <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
               </folding>
@@ -74,7 +72,7 @@
       <file leaf-file-name="matsHome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-41">
               <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
@@ -138,9 +136,9 @@
         <option value="$PROJECT_DIR$/vendor/Home.html" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/score.php" />
-        <option value="$PROJECT_DIR$/matsMonteCarlo.php" />
         <option value="$PROJECT_DIR$/matsHome.html" />
         <option value="$PROJECT_DIR$/matsGeneral.php" />
+        <option value="$PROJECT_DIR$/matsMonteCarlo.php" />
         <option value="$PROJECT_DIR$/matsDisplay.php" />
         <option value="$PROJECT_DIR$/matsScore.php" />
       </list>
@@ -225,6 +223,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/mats-application/matsGeneral.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -357,7 +356,7 @@
       <workItem from="1521403836558" duration="2543000" />
       <workItem from="1521410430208" duration="599000" />
       <workItem from="1521446363615" duration="101000" />
-      <workItem from="1521870177997" duration="14482000" />
+      <workItem from="1521870177997" duration="19118000" />
     </task>
     <task id="LOCAL-00001" summary="added files / localhost access">
       <created>1511177199494</created>
@@ -398,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97796000" />
+    <option name="totallyTimeSpent" value="102432000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,39 +733,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/matsHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matsMonteCarlo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="-143">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
             <element signature="e#7#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matsHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matsDisplay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        <state relative-caret-position="350">
+          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
             <element signature="e#7#75#0#PHP" expanded="true" />
-            <marker date="1521893391125" expanded="true" signature="247:266" ph="..." />
+            <marker date="1521897742331" expanded="true" signature="247:266" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matsGeneral.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="207" column="7" lean-forward="true" selection-start-line="207" selection-start-column="7" selection-end-line="207" selection-end-column="7" />
+        <state relative-caret-position="-575">
+          <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
           <folding>
             <element signature="e#7#75#0#PHP" expanded="true" />
           </folding>
@@ -775,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matsScore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        <state relative-caret-position="384">
+          <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
           <folding />
         </state>
       </provider>

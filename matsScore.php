@@ -27,22 +27,6 @@ class matsScore extends matsGeneral
                 return 0.3;
         }
     }
-    
-    public function calculateMonteCarloWeight()
-    {
-        $value = $this->calculateTestingEffort();
-        switch ($value)
-        {
-            case ($value = 0.15):
-                return 0.2;
-                break;
-            case ($value = 0.4):
-                return 0.5;
-                break;
-            case ($value = 0.3);
-                return 0.8;
-        }
-    }
 
     /**
      * Calculates the estimate for the project
@@ -54,33 +38,73 @@ class matsScore extends matsGeneral
         $bestCaseEst = $this->getFromInput("est_bc");
         $estimate = $this->getFromInput("est");
         $worstCaseEst = $this->getFromInput("est_wc");
-        $threePointEst = (2*$bestCaseEst + 4*$estimate + 2*$worstCaseEst)/6;
+        $threePointEst = ($bestCaseEst + 4*$estimate + $worstCaseEst)/6;
         return $threePointEst;
     }
 
+//    /**
+//     *
+//     */
+//    public function calculateStoryPoints()
+//    {
+//        $matsMonteCarlo = new matsMonteCarlo();
+//        $estimate = $this->calculateEstimate();
+//        $storyLow = 0.1 * $_GET["story_low"];
+//        $storyMid = 0.2 * $_GET["story_mid"];
+//        $storyHigh = 0.5 * $_GET["story_high"];
+//        $storyTotal = $storyLow + $storyMid + $storyHigh;
+//        echo ($storyTotal);
+//
+//        $storyLowTime = ($storyLow * $estimate / $storyTotal)/$_GET["story_low"];
+//        $storyMidTime = ($storyMid * $estimate / $storyTotal)/$_GET["story_mid"];
+//        $storyHighTime = ($storyHigh * $estimate / $storyTotal)/$_GET["story_high"];
+//
+//        echo nl2br("
+//        \n Story Low: {$storyLowTime}
+//        \n Story Mid: {$storyMidTime}
+//        \n Story High: {$storyHighTime}
+//        ");
+//        $matsMonteCarlo->generateMCValue($storyMid);
+//    }
+
     /**
-     *
+     * @param $story
      */
-    public function calculateStoryPoints()
+    public function calculateStoryTestingTime($story)
     {
         $matsMonteCarlo = new matsMonteCarlo();
         $estimate = $this->calculateEstimate();
-        $storyLow = 0.1 * $_GET["story_low"];
-        $storyMid = 0.2 * $_GET["story_mid"];
-        $storyHigh = 0.5 * $_GET["story_high"];
-        $storyTotal = $storyLow + $storyMid + $storyHigh;
-        echo ($storyTotal);
+        $storyTotal = $this->getTotalStories();
+        $a = array();
+        $i = 0;
 
-        $storyLowTime = ($storyLow * $estimate / $storyTotal)/$_GET["story_low"];
-        $storyMidTime = ($storyMid * $estimate / $storyTotal)/$_GET["story_mid"];
-        $storyHighTime = ($storyHigh * $estimate / $storyTotal)/$_GET["story_high"];
+        $storyTime = ($story * $estimate / $storyTotal) / $story;
 
+        while ($i < 100){
+            $storyTestTime =
+                $matsMonteCarlo->getMonteCarloNumber($storyTime) *
+                $this->calculateTestingEffort();
+            $storyMC = $matsMonteCarlo->getMonteCarloNumber($storyTestTime);
+            array_push($a, $storyMC);
+            $i++;
+        }
+        $average = (array_sum($a)/count($a));
+        $min = min($a);
+        $max = max($a);
+        $testTime = round((($min + (4 * $average) + $max)/6),2);
+        $sd = $max - $min / 6;
+//        $testTime = round($average,2);
 
         echo nl2br("
-        \n Story Low: {$storyLowTime} 
-        \n Story Mid: {$storyMidTime} 
-        \n Story High: {$storyHighTime}
+        \n Story Total: {$storyTotal} 
+        \n Story Time: {$storyTime} 
+        \n Min value: {$min} 
+        \n Average value: {$average}           
+        \n Max value: {$max}        
+        \n Test Time: {$testTime}
+        \n StdDev: {$sd}        
         ");
-        $matsMonteCarlo->generateMCValue($storyMid);
+
+        return $testTime;
     }
 }

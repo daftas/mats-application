@@ -36,13 +36,13 @@ $matsScore = new matsScore();
     <?php
     print ("<tr><td><b>Complexity Points: </b></td><td><p></p></td></tr>
 <tr><td><b>Estimated time on the project: </b></td><td><p>{$matsScore->calculateEstimate()}</p></td></tr>
-<tr><td><b>Story points re-calculated: </b></td><td><p>{$matsScore->calculateStoryPoints()}</p></td></tr>
+<tr><td><b>Story points re-calculated: </b></td><td><p></p></td></tr>
 <tr><td><b>Resource cost ratio (Manual vs Automated): </b></td><td><p>1.25 : 1</p></td></tr>");
     ?>
 </table>
 <hr>
 <?php
-print("<h3>Additional information:{$matsScore->calculateTestingEffort()}</h3><br>");
+print("<h3>Additional information:{$matsScore->calculateStoryTestingTime($_GET[$matsGeneral::NAME_HIGH_COMPLEXITY_STORY])}</h3><br>");
 print ("<div> System ran 1000 trials of this model for Monte Carlo analysis;</div><br>
 <div> </div>");
 ?>
