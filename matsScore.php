@@ -9,10 +9,39 @@ class matsScore extends matsGeneral
 
 {
 
-    public function calculateComplexity()
+    /**
+     * @return float
+     */
+    public function calculateTestingEffort()
     {
-        $matsMonteCarlo = new matsMonteCarlo();
-        return $matsMonteCarlo->getComplexity();
+        $percentage = $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
+        switch ($percentage)
+        {
+            case ($percentage <= 0.38):
+                return 0.15;
+                break;
+            case ($percentage >= 0.71):
+                return 0.4;
+                break;
+            default;
+                return 0.3;
+        }
+    }
+    
+    public function calculateMonteCarloWeight()
+    {
+        $value = $this->calculateTestingEffort();
+        switch ($value)
+        {
+            case ($value = 0.15):
+                return 0.2;
+                break;
+            case ($value = 0.4):
+                return 0.5;
+                break;
+            case ($value = 0.3);
+                return 0.8;
+        }
     }
 
     /**
@@ -35,7 +64,23 @@ class matsScore extends matsGeneral
     public function calculateStoryPoints()
     {
         $matsMonteCarlo = new matsMonteCarlo();
-        $story = $_GET["story_mid"];
-        return $matsMonteCarlo->generateMCValue($story);
+        $estimate = $this->calculateEstimate();
+        $storyLow = 0.1 * $_GET["story_low"];
+        $storyMid = 0.2 * $_GET["story_mid"];
+        $storyHigh = 0.5 * $_GET["story_high"];
+        $storyTotal = $storyLow + $storyMid + $storyHigh;
+        echo ($storyTotal);
+
+        $storyLowTime = ($storyLow * $estimate / $storyTotal)/$_GET["story_low"];
+        $storyMidTime = ($storyMid * $estimate / $storyTotal)/$_GET["story_mid"];
+        $storyHighTime = ($storyHigh * $estimate / $storyTotal)/$_GET["story_high"];
+
+
+        echo nl2br("
+        \n Story Low: {$storyLowTime} 
+        \n Story Mid: {$storyMidTime} 
+        \n Story High: {$storyHighTime}
+        ");
+        $matsMonteCarlo->generateMCValue($storyMid);
     }
 }

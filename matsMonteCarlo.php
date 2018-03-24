@@ -38,7 +38,6 @@ class matsMonteCarlo extends matsGeneral
         $a = array();
         $i = 0;
         $complexity = $this->getComplexity();
-        echo $complexity;
         while ($i < 10000){
             $r = round(($number*($this->createRandomFloat((1.01-$complexity),(1.01+$complexity)))),2);
             array_push($a, $r);

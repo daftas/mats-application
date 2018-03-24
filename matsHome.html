@@ -10,17 +10,42 @@
 <h2>Fill out form and click submit</h2>
 <br><br><br>
 <form action="matsDisplay.php" method="get">
-    <p><b>Select all platforms for which the project is developed</b></p>
-    <input type="checkbox" name="iOS" value="3"> Apple Store (iOS)<br>
-    <input type="checkbox" name="Android" value="1"> Google Store (Android)<br>
-    <input type="checkbox" name="Other" value="2"> Other<br>
+    <hr><h3>Project complexity:</h3>
+    <p><b>Select all platforms for which the project is developed: </b></p>
+    <input type="checkbox" name="ios" value="3"> Apple Store (iOS)<br>
+    <input type="checkbox" name="android" value="1"> Google Store (Android)<br>
+    <input type="checkbox" name="other" value="2"> Other<br>
+    <p><b>Features that are a must for an app: </b></p>
+    <input type="checkbox" name="image" value="1"> Image Capture<br>
+    <input type="checkbox" name="geolocation" value="1"> Geolocation<br>
+    <input type="checkbox" name="notificiations" value="1"> Push Notifications<br>
+    <input type="checkbox" name="media" value="1"> Social Media<br>
+    <input type="checkbox" name="data" value="1"> Data Capture<br>
+    <input type="checkbox" name="signature" value="1"> Signature Capture<br>
+    <input type="checkbox" name="authorization" value="1"> Authentication/Authorization<br>
+    <input type="checkbox" name="payment" value="1"> Payment<br>
+    <input type="checkbox" name="Messaging" value="1"> Scanning(QR/Barcode)<br>
+    <input type="checkbox" name="animation" value="1"> Animation<br>
+    <input type="checkbox" name="form" value="1"> Form/Survey<br>
+    <input type="checkbox" name="storage" value="1"> Data Storage<br>
+    <input type="checkbox" name="sync" value="1"> Data Sync<br>
+    <input type="checkbox" name="other" value="1"> Other<br>
+    <p><b>Mobile initiatives for the company:</b></p>
+    <input type="radio" name="company" value="5"> 0-5<br>
+    <input type="radio" name="company" value="3"> 5-15<br>
+    <input type="radio" name="company" value="1"> 15+<br>
+    <p><b>3rd Party services integration needed?</b></p>
+    <input type="radio" name="integration" value="yes"> Yes<br>
+    <input type="radio" name="integration" value="no"> No<br>
     <p><b>Lifecycle of the application:</b></p>
     <input type="radio" name="lifecycle" value="supportable"> Supportable<br>
     <input type="radio" name="lifecycle" value="nonsupportable"> Non-supportable<br>
+    <hr><h3>User stories for the project</h3>
     <p><b>Approx. number of user stories in the app making:</b></p>
-    Low (relatively easy) <input type="text" name="story_min"> <br><br>
+    Low (relatively easy) <input type="text" name="story_low"> <br><br>
     Medium (moderate) <input type="text" name="story_mid"> <br><br>
-    High (relatively complex) <input type="text" name="story_max"> <br><br>
+    High (relatively complex) <input type="text" name="story_high"> <br><br>
+    <hr><h3>Time for the project</h3>
     <p><b>Time estimation:</b></p>
     Best-case scenario <input type="text" name="est_bc"> <br><br>
     Most-likely scenario <input type="text" name="est"> <br><br>
