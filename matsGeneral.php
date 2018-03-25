@@ -13,16 +13,27 @@ class matsGeneral
     var $matsScore;
 
     /**
-     * @var matsMonteCarlo
+     * @var matsComplexity
      */
-    var $matsMonteCarlo;
+    var $matsComplexity;
 
     CONST NAME_COMPANY = 'company';
     CONST NAME_INTEGRATION = 'integration';
     CONST NAME_LIFECYCLE = 'lifecycle';
 
-    CONST VALUE_MIN_COMPLEXITY = 3;
-    CONST VALUE_MAX_COMPLEXITY = 35;
+    CONST POINTS_MIN_COMPLEXITY = 3;
+    CONST POINTS_MAX_COMPLEXITY = 35;
+
+    CONST PERCENTAGE_BORDER_MIN_TO_MID = 0.38;
+    CONST PERCENTAGE_BORDER_MID_TO_MAX = 0.71;
+
+    CONST COEFFICIENT_TESTING_EFFORT_MIN = 0.15;
+    CONST COEFFICIENT_TESTING_EFFORT_MID = 0.3;
+    CONST COEFFICIENT_TESTING_EFFORT_MAX = 0.4;
+
+    CONST WEIGHT_MONTE_CARLO_MIN = 0.2;
+    CONST WEIGHT_MONTE_CARLO_MID = 0.5;
+    CONST WEIGHT_MONTE_CARLO_MAX = 0.8;
 
     CONST NAME_LOW_COMPLEXITY_STORY = 'story_low';
     CONST NAME_MID_COMPLEXITY_STORY = 'story_mid';
@@ -31,11 +42,17 @@ class matsGeneral
     CONST NAME_BEST_CASE_TIME = 'est_bc';
     CONST NAME_ESTIMATED_TIME = 'est';
     CONST NAME_WORST_CASE_TIME = 'est_wc';
+
+    CONST COEFFICIENT_LOW_STORY = 0.1;
+    CONST COEFFICIENT_MID_STORY = 0.2;
+    CONST COEFFICIENT_HIGH_STORY = 0.5;
+
+    CONST NUMBER_MONTE_CARLO_TRIALS = 1000;
     
     public function setUp()
     {
         $this->setMatsScore(new matsScore);
-        $this->setMatsMonteCarlo(new matsMonteCarlo);
+        $this->setMatsComplexity(new matsComplexity);
     }
     
     /**
@@ -56,20 +73,20 @@ class matsGeneral
     }
 
     /**
-     * @return matsMonteCarlo
+     * @return matsComplexity
      */
-    public function getMatsMonteCarlo()
+    public function getMatsComplexity()
     {
-        return $this->matsMonteCarlo;
+        return $this->matsComplexity;
     }
 
     /**
-     * @param $matsMonteCarlo
+     * @param $matsComplexity
      * @return mixed
      */
-    public function setMatsMonteCarlo($matsMonteCarlo)
+    public function setMatsComplexity($matsComplexity)
     {
-        return $this->matsMonteCarlo = $matsMonteCarlo;
+        return $this->matsComplexity = $matsComplexity;
     }
 
     /**
@@ -86,14 +103,13 @@ class matsGeneral
      */
     public function getPattern()
     {
-        $pattern = "Platforms for your application: %s.;
+        $pattern = "Platforms for your application: %s;
                     <br>Lifecycle of your project is %s;
                     <br>You have entered %s stories in total;
                     <br>Your most likely time estimation is %s;
                     <br>";
         return $pattern;
     }
-
 
     /**
      * @return int
@@ -103,22 +119,15 @@ class matsGeneral
         return $_GET["story_low"] + $_GET["story_mid"] + $_GET["story_high"];
     }
 
-
     /**
-     * @param array $name
      * @return float|int
      */
-    private function getCheckboxPoints($name)
+    public function getTotalStoriesCoef()
     {
-        $a = array();
-        foreach ($name as $f)
-        {
-            if (isset($_GET[$f]))
-            {
-                array_push($a, $_GET[$f]);
-            }
-        }
-        return array_sum($a);
+        return
+            self::COEFFICIENT_LOW_STORY * $_GET["story_low"] +
+            self::COEFFICIENT_MID_STORY * $_GET["story_mid"] +
+            self::COEFFICIENT_HIGH_STORY * $_GET["story_high"];
     }
 
     /**
@@ -156,107 +165,5 @@ class matsGeneral
         {
             return "Non-supportable";
         }
-    }
-
-    /**
-     * @return int
-     */
-    public function getAppStorePoints()
-    {
-        $app = array(
-            'ios',
-            'android',
-            'other'
-        );
-
-        return $this->getCheckboxPoints($app);
-    }
-
-    /**
-     * @return int
-     */
-    public function getFeaturePoints()
-    {
-        $features = array(
-        'image',
-        'geolocation',
-        'notificiations',
-        'media',
-        'data',
-        'signature',
-        'authorization',
-        'payment',
-        'messaging',
-        'animation',
-        'form',
-        'storage',
-        'sync',
-        'other'
-        );
-
-        return $this->getCheckboxPoints($features);
-    }
-
-    /**
-     * @return int
-     */
-    public function getTotalAvailableComplexityPoints()
-    {
-        return self::VALUE_MAX_COMPLEXITY - self::VALUE_MIN_COMPLEXITY;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCompanyPoints()
-    {
-        return $_GET[self::NAME_COMPANY];
-    }
-
-    /**
-     * @return int
-     */
-    public function getIntegrationPoints()
-    {
-        return $_GET[self::NAME_INTEGRATION];
-    }
-
-    /**
-     * @return int
-     */
-    public function getLifecyclePoints()
-    {
-        return $_GET[self::NAME_LIFECYCLE];
-    }
-
-    public function getComplexityPoints()
-    {
-        $app = array(
-            'ios',
-            'android',
-            'other'
-        );
-        $features = array(
-            'image',
-            'geolocation',
-            'notificiations',
-            'media',
-            'data',
-            'signature',
-            'authorization',
-            'payment',
-            'messaging',
-            'animation',
-            'form',
-            'storage',
-            'sync',
-            'other'
-        );
-        return
-            $this->getCheckboxPoints($app) +
-            $this->getCheckboxPoints($features) +
-            $_GET[self::NAME_COMPANY] +
-            $_GET[self::NAME_INTEGRATION] +
-            $_GET[self::NAME_LIFECYCLE];
     }
 }

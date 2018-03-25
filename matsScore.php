@@ -3,30 +3,11 @@
  * matsScore.php
  * @copyright © 2018 Ramunas Andrijauskas
  */
-require_once("matsMonteCarlo.php");
+require_once("matsComplexity.php");
 
 class matsScore extends matsGeneral
 
 {
-
-    /**
-     * @return float
-     */
-    public function calculateTestingEffort()
-    {
-        $percentage = $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
-        switch ($percentage)
-        {
-            case ($percentage <= 0.38):
-                return 0.15;
-                break;
-            case ($percentage >= 0.71):
-                return 0.4;
-                break;
-            default;
-                return 0.3;
-        }
-    }
 
     /**
      * Calculates the estimate for the project
@@ -38,73 +19,66 @@ class matsScore extends matsGeneral
         $bestCaseEst = $this->getFromInput("est_bc");
         $estimate = $this->getFromInput("est");
         $worstCaseEst = $this->getFromInput("est_wc");
-        $threePointEst = ($bestCaseEst + 4*$estimate + $worstCaseEst)/6;
+        $threePointEst = round((($bestCaseEst + 4*$estimate + $worstCaseEst)/6),0);
         return $threePointEst;
     }
 
-//    /**
-//     *
-//     */
-//    public function calculateStoryPoints()
-//    {
-//        $matsMonteCarlo = new matsMonteCarlo();
-//        $estimate = $this->calculateEstimate();
-//        $storyLow = 0.1 * $_GET["story_low"];
-//        $storyMid = 0.2 * $_GET["story_mid"];
-//        $storyHigh = 0.5 * $_GET["story_high"];
-//        $storyTotal = $storyLow + $storyMid + $storyHigh;
-//        echo ($storyTotal);
-//
-//        $storyLowTime = ($storyLow * $estimate / $storyTotal)/$_GET["story_low"];
-//        $storyMidTime = ($storyMid * $estimate / $storyTotal)/$_GET["story_mid"];
-//        $storyHighTime = ($storyHigh * $estimate / $storyTotal)/$_GET["story_high"];
-//
-//        echo nl2br("
-//        \n Story Low: {$storyLowTime}
-//        \n Story Mid: {$storyMidTime}
-//        \n Story High: {$storyHighTime}
-//        ");
-//        $matsMonteCarlo->generateMCValue($storyMid);
-//    }
-
     /**
-     * @param $story
+     * @param $s
+     * @return float|int
      */
-    public function calculateStoryTestingTime($story)
+    public function getStoryCoef($s)
     {
-        $matsMonteCarlo = new matsMonteCarlo();
+        switch ($s)
+        {
+            case ($s === self::NAME_LOW_COMPLEXITY_STORY):
+                return self::COEFFICIENT_LOW_STORY * $_GET[$s];
+                break;
+            case ($s === self::NAME_MID_COMPLEXITY_STORY):
+                return self::COEFFICIENT_MID_STORY * $_GET[$s];
+                break;
+            case ($s === self::NAME_HIGH_COMPLEXITY_STORY):
+                return self::COEFFICIENT_HIGH_STORY * $_GET[$s];
+                break;
+            default;
+                return print ("\n Story not set");
+        }
+    }
+    
+    /**
+     * @param int $s
+     * @return float
+     */
+    public function calculateStoryTestingTime($s)
+    {
+        $matsComplexity = new matsComplexity();
         $estimate = $this->calculateEstimate();
-        $storyTotal = $this->getTotalStories();
+        $storyTotal = $this->getTotalStoriesCoef();
+        $storyCount = $_GET[$s];
+        $story = $this->getStoryCoef($s);
         $a = array();
         $i = 0;
+        $storyTime = 6*($story * $estimate / $storyTotal) / $storyCount;
+        $storyDummy = $storyTime * $matsComplexity->calculateTestingEffort();
 
-        $storyTime = ($story * $estimate / $storyTotal) / $story;
-
-        while ($i < 100){
+        while ($i < self::NUMBER_MONTE_CARLO_TRIALS){
             $storyTestTime =
-                $matsMonteCarlo->getMonteCarloNumber($storyTime) *
-                $this->calculateTestingEffort();
-            $storyMC = $matsMonteCarlo->getMonteCarloNumber($storyTestTime);
+                //$matsComplexity->getMonteCarloNumber($storyTime) *
+                $matsComplexity->generateMCValue($storyTime) *
+                $matsComplexity->calculateTestingEffort();
+            //$storyMC = $matsComplexity->getMonteCarloNumber($storyTestTime);
+            $storyMC = $matsComplexity->generateMCValue($storyTestTime);
             array_push($a, $storyMC);
             $i++;
         }
+
         $average = (array_sum($a)/count($a));
         $min = min($a);
         $max = max($a);
         $testTime = round((($min + (4 * $average) + $max)/6),2);
-        $sd = $max - $min / 6;
-//        $testTime = round($average,2);
+        $storyd = ($max - $min) / 6;
 
-        echo nl2br("
-        \n Story Total: {$storyTotal} 
-        \n Story Time: {$storyTime} 
-        \n Min value: {$min} 
-        \n Average value: {$average}           
-        \n Max value: {$max}        
-        \n Test Time: {$testTime}
-        \n StdDev: {$sd}        
-        ");
-
-        return $testTime;
+       return print "<td>{$storyCount}</td><td>{$storyTime}</td><td>{$storyDummy}</td><td>{$min}</td><td>{$average}</td><td>{$max}</td><td>{$testTime}</td><td>{$storyd}</td>";
+        //return $testTime;
     }
 }

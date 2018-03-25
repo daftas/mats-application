@@ -19,6 +19,18 @@ $matsScore = new matsScore();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MATS Application</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
     <h5>
     <?php
     print(sprintf(
@@ -33,18 +45,35 @@ $matsScore = new matsScore();
 </head>
 <body>
 <table>
-    <?php
-    print ("<tr><td><b>Complexity Points: </b></td><td><p></p></td></tr>
-<tr><td><b>Estimated time on the project: </b></td><td><p>{$matsScore->calculateEstimate()}</p></td></tr>
-<tr><td><b>Story points re-calculated: </b></td><td><p></p></td></tr>
-<tr><td><b>Resource cost ratio (Manual vs Automated): </b></td><td><p>1.25 : 1</p></td></tr>");
-    ?>
+    <tr>
+        <th>Story type</th>
+        <th>Story Total</th>
+        <th>Story Time</th>
+        <th>Original Test Time</th>
+        <th>Min test value</th>
+        <th>Average test value</th>
+        <th>Max test value</th>
+        <th>Test Time</th>
+        <th>Std.Dev</th>
+    </tr>
+    <tr>
+        <td>Low complexity story</td>
+        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_LOW_COMPLEXITY_STORY); ?>
+    </tr>
+    <tr>
+        <td>Moderate complexity story</td>
+        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_MID_COMPLEXITY_STORY); ?>
+    </tr>
+    <tr>
+        <td>High complexity story</td>
+        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_HIGH_COMPLEXITY_STORY); ?>
+    </tr>
 </table>
 <hr>
-<?php
-print("<h3>Additional information:{$matsScore->calculateStoryTestingTime($_GET[$matsGeneral::NAME_HIGH_COMPLEXITY_STORY])}</h3><br>");
-print ("<div> System ran 1000 trials of this model for Monte Carlo analysis;</div><br>
-<div> </div>");
-?>
+<h3>Additional information:</h3><br>
+<?php print "
+<div> Using three point estimate, your most likely project time estimation is: {$matsScore->calculateEstimate()} days;</div><br>";?>
+<div> System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
+<div></div>
 </body>
 </html>
