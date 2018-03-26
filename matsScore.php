@@ -52,33 +52,39 @@ class matsScore extends matsGeneral
     public function calculateStoryTestingTime($s)
     {
         $matsComplexity = new matsComplexity();
-        $estimate = $this->calculateEstimate();
+//        $estimate = $this->calculateEstimate();
+        $estimate = $matsComplexity->runMonteCarlo(1);
+        $effort = $matsComplexity->calculateTestingEffort();
         $storyTotal = $this->getTotalStoriesCoef();
         $storyCount = $_GET[$s];
-        $story = $this->getStoryCoef($s);
-        $a = array();
-        $i = 0;
-        $storyTime = 6*($story * $estimate / $storyTotal) / $storyCount;
-        $storyDummy = $storyTime * $matsComplexity->calculateTestingEffort();
+        $storyCoef = $this->getStoryCoef($s);
+//        $a = array();
+//        $i = 0;
 
-        while ($i < self::NUMBER_MONTE_CARLO_TRIALS){
-            $storyTestTime =
-                //$matsComplexity->getMonteCarloNumber($storyTime) *
-                $matsComplexity->generateMCValue($storyTime) *
-                $matsComplexity->calculateTestingEffort();
-            //$storyMC = $matsComplexity->getMonteCarloNumber($storyTestTime);
-            $storyMC = $matsComplexity->generateMCValue($storyTestTime);
-            array_push($a, $storyMC);
-            $i++;
-        }
+        $storyTotalTime = ($storyCoef * $estimate) / $storyTotal;
+        $storyTime = $storyTotalTime / $storyCount;
+        $testTime = $storyTime * $effort;
+        //echo nl2br("\n") . $matsComplexity->generateMCValue($storyTime);
+        //phpinfo();
+//
+//        while ($i < self::NUMBER_MONTE_CARLO_TRIALS){
+//            $storyTestTime =
+//                //$matsComplexity->getMonteCarloNumber($storyTime) *
+//                $matsComplexity->generateMCValue($storyTime) *
+//                $matsComplexity->calculateTestingEffort();
+//            $storyMC = $matsComplexity->getMonteCarloNumber($storyTestTime);
+//            $storyMC = $matsComplexity->generateMCValue($storyTestTime);
+//            array_push($a, $storyMC);
+//            $i++;
+//        }
+//
+//        $average = (array_sum($a)/count($a));
+//        $min = min($a);
+//        $max = max($a);
+//        $testTime = round((($min + (4 * $average) + $max)/6),2);
+//        $storyd = ($max - $min) / 6;
 
-        $average = (array_sum($a)/count($a));
-        $min = min($a);
-        $max = max($a);
-        $testTime = round((($min + (4 * $average) + $max)/6),2);
-        $storyd = ($max - $min) / 6;
-
-       return print "<td>{$storyCount}</td><td>{$storyTime}</td><td>{$storyDummy}</td><td>{$min}</td><td>{$average}</td><td>{$max}</td><td>{$testTime}</td><td>{$storyd}</td>";
+       return print "<td>{$storyCount}</td><td>{$estimate}</td><td>{$storyCoef}</td><td>{$storyTotalTime}</td><td>{$storyTime}</td><td>{$testTime}</td>";
         //return $testTime;
     }
 }

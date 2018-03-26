@@ -9,6 +9,7 @@ require_once("matsGeneral.php");
 require_once("matsScore.php");
 
 $matsGeneral = new matsGeneral();
+$matsComplexity = new matsComplexity();
 $matsScore = new matsScore();
 ?>
 <!doctype html>
@@ -47,14 +48,12 @@ $matsScore = new matsScore();
 <table>
     <tr>
         <th>Story type</th>
-        <th>Story Total</th>
-        <th>Story Time</th>
-        <th>Original Test Time</th>
-        <th>Min test value</th>
-        <th>Average test value</th>
-        <th>Max test value</th>
-        <th>Test Time</th>
-        <th>Std.Dev</th>
+        <th>Story Count</th>
+        <th>Total Estimate</th>
+        <th>Story Coeff</th>
+        <th>Story Total Time</th>
+        <th>Single Story Time</th>
+        <th>Single Story Test Time</th>
     </tr>
     <tr>
         <td>Low complexity story</td>
@@ -75,5 +74,22 @@ $matsScore = new matsScore();
 <div> Using three point estimate, your most likely project time estimation is: {$matsScore->calculateEstimate()} days;</div><br>";?>
 <div> System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
 <div></div>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Original minimum</th>
+        <th>Original maximum</th>
+        <th>Original std.dev</th>
+        <th>Normal average</th>
+        <th>Normal minimum</th>
+        <th>Normal maximum</th>
+        <th>Normal calculated optimal est</th>
+        <th>Normal std.dev</th>
+    </tr>
+    <tr>
+        <td>Estimate using bell curve</td>
+        <?php $matsComplexity->runMonteCarlo(); ?>
+    </tr>
+</table>
 </body>
 </html>
