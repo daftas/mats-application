@@ -33,7 +33,7 @@ class matsComplexity extends matsGeneral
         $app = array(
             'ios',
             'android',
-            'other'
+            'os_other'
         );
 
         return $this->getCheckboxPoints($app);
@@ -58,7 +58,7 @@ class matsComplexity extends matsGeneral
             'form',
             'storage',
             'sync',
-            'other'
+            'feature_other'
         );
 
         return $this->getCheckboxPoints($features);
@@ -101,7 +101,7 @@ class matsComplexity extends matsGeneral
         $app = array(
             'ios',
             'android',
-            'other'
+            'os_other'
         );
         $features = array(
             'image',
@@ -117,7 +117,7 @@ class matsComplexity extends matsGeneral
             'form',
             'storage',
             'sync',
-            'other'
+            'feature_other'
         );
         return
             $this->getCheckboxPoints($app) +
@@ -214,6 +214,7 @@ class matsComplexity extends matsGeneral
 
         while ($i++ < self::NUMBER_MONTE_CARLO_TRIALS) {
             $pure = $this->generateGaussianNumber($min, $max, $stdDev);
+            //$avg = ($min + ($y*$pure) + $max) / ($y + 2);
             array_push($a, $pure);
         }
 

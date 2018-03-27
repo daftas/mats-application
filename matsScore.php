@@ -44,6 +44,47 @@ class matsScore extends matsGeneral
                 return print ("\n Story not set");
         }
     }
+
+    /**
+     * @param $s
+     * @return float|int
+     */
+    public function getStoryWeight($s)
+    {
+        switch ($s)
+        {
+            case ($s === self::NAME_FIBANACI_STORY_POINT_1):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_1 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_2):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_2 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_3):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_3 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_5):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_5 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_8):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_8 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_13):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_13 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_21):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_34):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_34 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_55):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_55 * $_GET[$s];
+                break;
+
+            default;
+                return print ("\n Story not set");
+        }
+    }
     
     /**
      * @param int $s
@@ -55,36 +96,14 @@ class matsScore extends matsGeneral
 //        $estimate = $this->calculateEstimate();
         $estimate = $matsComplexity->runMonteCarlo(1);
         $effort = $matsComplexity->calculateTestingEffort();
-        $storyTotal = $this->getTotalStoriesCoef();
+        $storyTotal = $this->getTotalStoryPointsWeight();
         $storyCount = $_GET[$s];
-        $storyCoef = $this->getStoryCoef($s);
-//        $a = array();
-//        $i = 0;
-
-        $storyTotalTime = ($storyCoef * $estimate) / $storyTotal;
-        $storyTime = $storyTotalTime / $storyCount;
-        $testTime = $storyTime * $effort;
-        //echo nl2br("\n") . $matsComplexity->generateMCValue($storyTime);
-        //phpinfo();
-//
-//        while ($i < self::NUMBER_MONTE_CARLO_TRIALS){
-//            $storyTestTime =
-//                //$matsComplexity->getMonteCarloNumber($storyTime) *
-//                $matsComplexity->generateMCValue($storyTime) *
-//                $matsComplexity->calculateTestingEffort();
-//            $storyMC = $matsComplexity->getMonteCarloNumber($storyTestTime);
-//            $storyMC = $matsComplexity->generateMCValue($storyTestTime);
-//            array_push($a, $storyMC);
-//            $i++;
-//        }
-//
-//        $average = (array_sum($a)/count($a));
-//        $min = min($a);
-//        $max = max($a);
-//        $testTime = round((($min + (4 * $average) + $max)/6),2);
-//        $storyd = ($max - $min) / 6;
-
-       return print "<td>{$storyCount}</td><td>{$estimate}</td><td>{$storyCoef}</td><td>{$storyTotalTime}</td><td>{$storyTime}</td><td>{$testTime}</td>";
+        $storyWeight = $this->getStoryWeight($s);
+        $storyNormal = $storyWeight / $storyTotal;
+        $singleStoryNormal = $storyNormal / $storyCount;
+        $storyTime = $singleStoryNormal * $estimate;
+        $storyTestTime= $storyTime * $effort;
+       return print "<td>{$storyCount}</td><td>{$storyWeight}</td><td>{$storyNormal}</td><td>{$singleStoryNormal}</td><td>{$storyTime}</td><td>{$storyTestTime}</td>";
         //return $testTime;
     }
 }
