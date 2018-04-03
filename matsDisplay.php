@@ -95,7 +95,7 @@ $matsScore = new matsScore();
 <hr>
 <h3>Additional information:</h3><br>
 <?php print "
-<div> Using three point estimate, your most likely project time estimation is: {$matsScore->calculateEstimate()} days;</div><br>";?>
+<div> Using three point estimate, your most likely project time estimation is: {$matsComplexity->runMonteCarlo(1)} days;</div><br>";?>
 <div> System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
 <div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calculatePertGamma();?></div>
 <div>Total complexity points: <?php echo $matsComplexity->getComplexityPoints();?></div>

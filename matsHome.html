@@ -41,10 +41,6 @@
     <input type="radio" name="lifecycle" value="5"> Supportable<br>
     <input type="radio" name="lifecycle" value="1"> Non-supportable<br>
     <hr><h3>User stories for the project</h3>
-    <p><b>Approx. number of user stories in the app making:</b></p>
-    Low (relatively easy) <input type="text" name="story_low"> <br><br>
-    Medium (moderate) <input type="text" name="story_mid"> <br><br>
-    High (relatively complex) <input type="text" name="story_high"> <br><br>
     <p><b>Fibanaci story points for this project:</b></p>
     1 story point <input type="text" name="1sp"> <br><br>
     2 story points <input type="text" name="2sp"> <br><br>
@@ -58,22 +54,9 @@
     <hr><h3>Time for the project</h3>
     <p><b>Time estimation:</b></p>
     Best-case scenario <input type="text" name="est_bc"> <br><br>
-    Most-likely scenario <input type="text" name="est"> <br><br>
     Worst-case scenario <input type="text" name="est_wc"> <br><br>
     <br><br>
     <input type="submit" onclick="validateNumeric()"><br>
 </form>
 </body>
-<script>
-    function validateNumeric() {
-        var x, text;
-        x = document.getElementById("people").value;
-        if (isNaN(x)) {
-            text = "Input not valid";
-        } else {
-            text = "Input OK";
-        }
-        document.getElementById("submit_form").innerHTML = text;
-    }
-</script>
 </html>
