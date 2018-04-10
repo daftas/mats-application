@@ -10,42 +10,9 @@ class matsScore extends matsGeneral
 {
 
     /**
-     * Calculates the estimate for the project
+     * Calculates weight for each story point
+     * Formula: StoryPoint * Coefficient
      *
-     * @return float|int
-     */
-    public function calculateEstimate()
-    {
-        $bestCaseEst = $this->getFromInput("est_bc");
-        $estimate = $this->getFromInput("est");
-        $worstCaseEst = $this->getFromInput("est_wc");
-        $threePointEst = round((($bestCaseEst + 4*$estimate + $worstCaseEst)/6),0);
-        return $threePointEst;
-    }
-
-    /**
-     * @param $s
-     * @return float|int
-     */
-    public function getStoryCoef($s)
-    {
-        switch ($s)
-        {
-            case ($s === self::NAME_LOW_COMPLEXITY_STORY):
-                return self::COEFFICIENT_LOW_STORY * $_GET[$s];
-                break;
-            case ($s === self::NAME_MID_COMPLEXITY_STORY):
-                return self::COEFFICIENT_MID_STORY * $_GET[$s];
-                break;
-            case ($s === self::NAME_HIGH_COMPLEXITY_STORY):
-                return self::COEFFICIENT_HIGH_STORY * $_GET[$s];
-                break;
-            default;
-                return print ("\n Story not set");
-        }
-    }
-
-    /**
      * @param $s
      * @return float|int
      */

@@ -9,7 +9,9 @@ class matsComplexity extends matsGeneral
 {
 
     /**
-     * @param array $name
+     * Helper method to get single point
+     *
+     * @param $name
      * @return float|int
      */
     private function getCheckboxPoints($name)
@@ -26,76 +28,31 @@ class matsComplexity extends matsGeneral
     }
 
     /**
-     * @return int
+     * Method to create a random floater
+     *
+     * @param integer $min
+     * @param integer $max
+     * @return mixed
      */
-    public function getAppStorePoints()
+    private function createRandomFloat($min, $max)
     {
-        $app = array(
-            'ios',
-            'android',
-            'os_other'
-        );
-
-        return $this->getCheckboxPoints($app);
+        return ($min + lcg_value() * (abs($max - $min)));
     }
 
     /**
-     * @return int
-     */
-    public function getFeaturePoints()
-    {
-        $features = array(
-            'image',
-            'geolocation',
-            'notificiations',
-            'media',
-            'data',
-            'signature',
-            'authorization',
-            'payment',
-            'messaging',
-            'animation',
-            'form',
-            'storage',
-            'sync',
-            'feature_other'
-        );
-
-        return $this->getCheckboxPoints($features);
-    }
-
-    /**
+     * Method to get maximum available Complexity Points
+     *
      * @return int
      */
     public function getTotalAvailableComplexityPoints()
     {
         return self::POINTS_MAX_COMPLEXITY - self::POINTS_MIN_COMPLEXITY;
     }
-
     /**
-     * @return int
+     * Method to get complexity points according to inputs
+     *
+     * @return float|int
      */
-    public function getCompanyPoints()
-    {
-        return $_GET[self::NAME_COMPANY];
-    }
-
-    /**
-     * @return int
-     */
-    public function getIntegrationPoints()
-    {
-        return $_GET[self::NAME_INTEGRATION];
-    }
-
-    /**
-     * @return int
-     */
-    public function getLifecyclePoints()
-    {
-        return $_GET[self::NAME_LIFECYCLE];
-    }
-
     public function getComplexityPoints()
     {
         $app = array(
@@ -128,16 +85,8 @@ class matsComplexity extends matsGeneral
     }
 
     /**
-     * @param integer $min
-     * @param integer $max
-     * @return mixed
-     */
-    private function createRandomFloat($min, $max)
-    {
-        return ($min + lcg_value() * (abs($max - $min)));
-    }
-
-    /**
+     * Method to calculate testing effort according to complexity
+     *
      * @return float
      */
     public function calculateTestingEffort()
@@ -161,6 +110,8 @@ class matsComplexity extends matsGeneral
     }
 
     /**
+     * Method to calculate gamma used for calculation
+     *
      * @return float
      */
     public function calculatePertGamma()
@@ -182,23 +133,8 @@ class matsComplexity extends matsGeneral
         }
     }
 
-    public function getMonteCarloNumber($number)
-    {
-        $mcWeight = $this->calculatePertGamma();
-        return ($number*($this->createRandomFloat((1-$mcWeight),(1+$mcWeight))));
-    }
-
     /**
-     * @param integer $number
-     * @return float|int
-     */
-    public function generateMCValue($number)
-    {
-        $mcWeight = ($_GET[self::NAME_WORST_CASE_TIME] - $_GET[self::NAME_BEST_CASE_TIME]) / (6 * $_GET[self::NAME_ESTIMATED_TIME]);
-        return ($number*($this->createRandomFloat((1-$mcWeight),(1+$mcWeight))));
-    }
-
-    /**
+     * @param int $est
      * @return float|int
      */
     public function runMonteCarlo($est = 0)

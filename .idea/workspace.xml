@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/matsDisplay.php" afterPath="$PROJECT_DIR$/matsDisplay.php" />
+      <change beforePath="$PROJECT_DIR$/matsComplexity.php" afterPath="$PROJECT_DIR$/matsComplexity.php" />
       <change beforePath="$PROJECT_DIR$/matsGeneral.php" afterPath="$PROJECT_DIR$/matsGeneral.php" />
-      <change beforePath="$PROJECT_DIR$/matsHome.html" afterPath="$PROJECT_DIR$/matsHome.html" />
+      <change beforePath="$PROJECT_DIR$/matsScore.php" afterPath="$PROJECT_DIR$/matsScore.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,16 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="matsScore.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matsScore.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsScore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="96" column="54" lean-forward="true" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
+            <state relative-caret-position="332">
+              <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding>
-                <marker date="1522177360894" expanded="true" signature="3614:3633" ph="..." />
-                <marker date="1522177360894" expanded="true" signature="3659:3679" ph="..." />
-                <marker date="1522177360894" expanded="true" signature="3682:3708" ph="..." />
-                <marker date="1522177360894" expanded="true" signature="3711:3729" ph="..." />
+                <marker date="1523383747992" expanded="true" signature="2628:2647" ph="..." />
+                <marker date="1523383747992" expanded="true" signature="2673:2693" ph="..." />
+                <marker date="1523383747992" expanded="true" signature="2696:2722" ph="..." />
+                <marker date="1523383747992" expanded="true" signature="2725:2743" ph="..." />
               </folding>
             </state>
           </provider>
@@ -40,8 +40,8 @@
       <file leaf-file-name="matsComplexity.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsComplexity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="203" column="33" lean-forward="false" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="33" />
+            <state relative-caret-position="201">
+              <caret line="141" column="27" lean-forward="false" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
               <folding>
                 <element signature="e#7#78#0#PHP" expanded="true" />
               </folding>
@@ -52,8 +52,8 @@
       <file leaf-file-name="matsDisplay.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsDisplay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="201">
+              <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
               <folding>
                 <marker date="1522771848085" expanded="true" signature="287:306" ph="..." />
                 <marker date="1522771848085" expanded="true" signature="1123:1395" ph="..." />
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matsGeneral.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="matsGeneral.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matsGeneral.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="159" column="36" lean-forward="true" selection-start-line="159" selection-start-column="36" selection-end-line="159" selection-end-column="36" />
+            <state relative-caret-position="422">
+              <caret line="68" column="41" lean-forward="true" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
               </folding>
@@ -77,9 +77,22 @@
       <file leaf-file-name="matsHome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="570">
               <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -158,11 +171,11 @@
         <option value="$PROJECT_DIR$/matsMonteCarlo.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/matsHome.html" />
+        <option value="$PROJECT_DIR$/matsDisplay.php" />
         <option value="$PROJECT_DIR$/matsScore.php" />
         <option value="$PROJECT_DIR$/matsComplexity.php" />
         <option value="$PROJECT_DIR$/matsGeneral.php" />
-        <option value="$PROJECT_DIR$/matsHome.html" />
-        <option value="$PROJECT_DIR$/matsDisplay.php" />
       </list>
     </option>
   </component>
@@ -223,12 +236,6 @@
             </path>
             <path>
               <item name="mats-application" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mats-application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="composer" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mats-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -244,7 +251,7 @@
     <property name="last_opened_file_path" value="C:/php" />
     <property name="settings.editor.selected.configurable" value="debugger.stepping" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/mats-application/matsGeneral.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/mats-application/matsScore.php" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -389,7 +396,11 @@
       <workItem from="1522127721789" duration="51000" />
       <workItem from="1522158143521" duration="7079000" />
       <workItem from="1522214640782" duration="639000" />
-      <workItem from="1522771298862" duration="1813000" />
+      <workItem from="1522771298862" duration="3111000" />
+      <workItem from="1522827704148" duration="8000" />
+      <workItem from="1523115164264" duration="2551000" />
+      <workItem from="1523339925065" duration="23000" />
+      <workItem from="1523381432457" duration="1685000" />
     </task>
     <task id="LOCAL-00001" summary="added files / localhost access">
       <created>1511177199494</created>
@@ -430,7 +441,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156708000" />
+    <option name="totallyTimeSpent" value="162273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,21 +456,21 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18467475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19349504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.49558985" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.4740904" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5259096" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30490404" sideWeight="0.5242558" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30490404" sideWeight="0.4845645" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30490404" sideWeight="0.47574422" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.48401323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.48180816" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40618336" sideWeight="0.49338478" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32302773" sideWeight="0.49338478" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.4740904" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -512,7 +523,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/appium/php-client/PHPUnit/Extensions/AppiumTestCase/SessionCommand/Context.php" />
     <entry file="file://$PROJECT_DIR$/MatsElements.php" />
     <entry file="file://$PROJECT_DIR$/MatsTests.php" />
     <entry file="file://$PROJECT_DIR$/vendor/appium/php-client/PHPUnit/Extensions/AppiumTestCase/Driver.php" />
@@ -608,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11152">
           <caret line="656" column="36" lean-forward="false" selection-start-line="656" selection-start-column="36" selection-end-line="656" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,32 +655,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="1022" column="9" lean-forward="false" selection-start-line="1022" selection-start-column="9" selection-end-line="1022" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matsHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="570">
           <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matsComplexity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="203" column="33" lean-forward="false" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="33" />
-          <folding>
-            <element signature="e#7#78#0#PHP" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matsDisplay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="201">
+          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
           <folding>
             <marker date="1522771848085" expanded="true" signature="287:306" ph="..." />
             <marker date="1522771848085" expanded="true" signature="1123:1395" ph="..." />
@@ -679,25 +688,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matsGeneral.php">
+    <entry file="file://$PROJECT_DIR$/matsScore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="159" column="36" lean-forward="true" selection-start-line="159" selection-start-column="36" selection-end-line="159" selection-end-column="36" />
+        <state relative-caret-position="332">
+          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
-            <element signature="e#7#75#0#PHP" expanded="true" />
+            <marker date="1523383747992" expanded="true" signature="2628:2647" ph="..." />
+            <marker date="1523383747992" expanded="true" signature="2673:2693" ph="..." />
+            <marker date="1523383747992" expanded="true" signature="2696:2722" ph="..." />
+            <marker date="1523383747992" expanded="true" signature="2725:2743" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matsScore.php">
+    <entry file="file://$PROJECT_DIR$/matsComplexity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="96" column="54" lean-forward="true" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
+        <state relative-caret-position="201">
+          <caret line="141" column="27" lean-forward="false" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
           <folding>
-            <marker date="1522177360894" expanded="true" signature="3614:3633" ph="..." />
-            <marker date="1522177360894" expanded="true" signature="3659:3679" ph="..." />
-            <marker date="1522177360894" expanded="true" signature="3682:3708" ph="..." />
-            <marker date="1522177360894" expanded="true" signature="3711:3729" ph="..." />
+            <element signature="e#7#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matsGeneral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="68" column="41" lean-forward="true" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
+          <folding>
+            <element signature="e#7#75#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

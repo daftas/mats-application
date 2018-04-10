@@ -60,12 +60,7 @@ class matsGeneral
     CONST COEFFICIENT_FIBANACI_STORY_POINT_55 = 5.5;
     
     CONST NAME_BEST_CASE_TIME = 'est_bc';
-    CONST NAME_ESTIMATED_TIME = 'est';
     CONST NAME_WORST_CASE_TIME = 'est_wc';
-
-    CONST COEFFICIENT_LOW_STORY = 0.1;
-    CONST COEFFICIENT_MID_STORY = 0.2;
-    CONST COEFFICIENT_HIGH_STORY = 0.5;
 
     CONST GAMMA_LOW_UNCERTAINTY = 4;
     CONST GAMMA_MID_UNCERTAINTY = 3;
@@ -141,17 +136,6 @@ class matsGeneral
     public function getTotalStories()
     {
         return $_GET["story_low"] + $_GET["story_mid"] + $_GET["story_high"];
-    }
-
-    /**
-     * @return float|int
-     */
-    public function getTotalStoriesCoef()
-    {
-        return
-            self::COEFFICIENT_LOW_STORY * $_GET["story_low"] +
-            self::COEFFICIENT_MID_STORY * $_GET["story_mid"] +
-            self::COEFFICIENT_HIGH_STORY * $_GET["story_high"];
     }
     
     /**
