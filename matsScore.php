@@ -62,7 +62,7 @@ class matsScore extends matsGeneral
         $matsComplexity = new matsComplexity();
 //        $estimate = $this->calculateEstimate();
         $estimate = $matsComplexity->runMonteCarlo(1);
-        $effort = $matsComplexity->calculateTestingEffort();
+        $effort = $matsComplexity->calcTestingEffort();
         $storyTotal = $this->getTotalStoryPointsWeight();
         $storyCount = $_GET[$s];
         $storyWeight = $this->getStoryWeight($s);

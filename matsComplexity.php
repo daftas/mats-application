@@ -110,6 +110,19 @@ class matsComplexity extends matsGeneral
     }
 
     /**
+     * Method to calculate testing effort according to complexity
+     *
+     * @return float
+     */
+    public function calcTestingEffort()
+    {
+
+        $scored = $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
+        $diff = matsGeneral::COEFFICIENT_TESTING_EFFORT_MAX - matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
+        return ($scored * $diff) + matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
+    }
+
+    /**
      * Method to calculate gamma used for calculation
      *
      * @return float
