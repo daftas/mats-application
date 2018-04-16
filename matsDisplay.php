@@ -32,26 +32,24 @@ $matsScore = new matsScore();
             padding: 8px;
         }
     </style>
-    <h5>
-    <?php
-    print(sprintf(
-        $matsGeneral->getPattern(),
-        $matsGeneral->getAppStore(),
-        $matsGeneral->getLifecycle(),
-        $matsGeneral->getTotalStories(),
-        $matsGeneral->getFromInput("est")));
-    ?>
-    </h5>
-    <hr>
 </head>
 <body>
+<h3>Project information:</h3><br>
+<div>Using three point estimate, your most likely project time estimation is: <?php echo($matsComplexity->runMonteCarlo(1,1));?> days</div><br>
+<div>System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
+<div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calculatePertGamma();?></div>
+<div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
+<div>Total complexity points: <?php echo $matsComplexity->getComplexityPoints();?></div>
+<div>Total available points: <?php echo $matsComplexity->getTotalAvailableComplexityPoints();?></div>
+<hr>
+<h3>Story testing estimation:</h3><br>
 <table>
     <tr>
         <th>Fibanaci story point</th>
         <th>Total story count</th>
         <th>Story weight (fib * story count)</th>
         <th>Normalized numbers</th>
-        <th>Effort coeff for one story (normal / story count)</th>
+        <th>Effort coefficient for one story (normal / story count)</th>
         <th>Single story time allocated</th>
         <th>Single story test time allocated</th>
     </tr>
@@ -93,14 +91,7 @@ $matsScore = new matsScore();
     </tr>
 </table>
 <hr>
-<h3>Additional information:</h3><br>
-<?php print "
-<div> Using three point estimate, your most likely project time estimation is: {$matsComplexity->runMonteCarlo(1)} days;</div><br>";?>
-<div> System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
-<div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calculatePertGamma();?></div>
-<div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
-<div>Total complexity points: <?php echo $matsComplexity->getComplexityPoints();?></div>
-<div>Total available points: <?php echo $matsComplexity->getTotalAvailableComplexityPoints();?></div>
+<h3>Detail project estimation:</h3><br>
 <table>
     <tr>
         <th>Name</th>
@@ -112,10 +103,19 @@ $matsScore = new matsScore();
         <th>Normal maximum</th>
         <th>Normal calculated optimal est</th>
         <th>Normal std.dev</th>
+        <th>Array mode</th>
     </tr>
     <tr>
-        <td>Estimate using bell curve</td>
-        <?php $matsComplexity->runMonteCarlo(); ?>
+        <td>Estimate using bell curve (y2)</td>
+        <?php $matsComplexity->runMonteCarlo(0,1000,2); ?>
+    </tr>
+    <tr>
+        <td>Estimate using bell curve (y4)</td>
+        <?php $matsComplexity->runMonteCarlo(0,1000,4); ?>
+    </tr>
+    <tr>
+        <td>Estimate using bell curve (y6)</td>
+        <?php $matsComplexity->runMonteCarlo(0,1000,6); ?>
     </tr>
 </table>
 </body>

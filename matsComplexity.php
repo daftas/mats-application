@@ -85,6 +85,16 @@ class matsComplexity extends matsGeneral
     }
 
     /**
+     * Calcuates complexity percentage (k)
+     *
+     * @return float|int
+     */
+    private function calcComplexityPercentage()
+    {
+        return $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
+    }
+
+    /**
      * Method to calculate testing effort according to complexity
      *
      * @return float
@@ -111,13 +121,13 @@ class matsComplexity extends matsGeneral
 
     /**
      * Method to calculate testing effort according to complexity
+     * Calculates testing effort (e)
      *
      * @return float
      */
     public function calcTestingEffort()
     {
-
-        $scored = $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
+        $scored = $this->calcComplexityPercentage();
         $diff = matsGeneral::COEFFICIENT_TESTING_EFFORT_MAX - matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
         return ($scored * $diff) + matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
     }
@@ -146,27 +156,44 @@ class matsComplexity extends matsGeneral
         }
     }
 
+
+    /**
+     * Method to calculate testing effort according to complexity
+     * Calculates gamma (y)
+     *
+     * @return float
+     */
+    public function calcPertGamma()
+    {
+        $scored = $this->calcComplexityPercentage();
+        $diff = matsGeneral::COEFFICIENT_TESTING_EFFORT_MAX - matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
+        return ($scored * $diff) + matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
+    }
+
     /**
      * @param int $est
      * @return float|int
      */
-    public function runMonteCarlo($est = 0)
+    public function runMonteCarlo($est = 0, $mc = self::NUMBER_MONTE_CARLO_TRIALS, $yI = 4)
     {
         $min = $_GET[self::NAME_BEST_CASE_TIME];
         $max = $_GET[self::NAME_WORST_CASE_TIME];
-        $y = $this->calculatePertGamma();
-
+        $y = $this->calcPertGamma();
+        $y = $yI;
         $stdDev = ($max - $min) / ($y + 2);
         $a = array();
+        $b = array();
         $i = 0;
 
 
-        while ($i++ < self::NUMBER_MONTE_CARLO_TRIALS) {
+        while ($i++ < $mc) {
             $pure = $this->generateGaussianNumber($min, $max, $stdDev);
-            //$avg = ($min + ($y*$pure) + $max) / ($y + 2);
-            array_push($a, $pure);
+            $avg = ($min + ($y*$pure) + $max) / ($y + 2);
+            array_push($a, intval($avg));
+            array_push($b, intval($pure));
         }
-
+        $countA = array_count_values($a);
+        $modeB = array_search(max($countA),$countA);
         $averageB = (array_sum($a)/count($a));
         $minB = min($a);
         $maxB = max($a);
@@ -176,7 +203,7 @@ class matsComplexity extends matsGeneral
         {
             return $optimalB;
         } else {
-            return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$averageB}</td><td>{$minB}</td><td>{$maxB}</td><td>{$optimalB}</td><td>{$stdevB}</td>";
+            return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$averageB}</td><td>{$minB}</td><td>{$maxB}</td><td>{$optimalB}</td><td>{$stdevB}</td><td>{$modeB}</td>";
         }
     }
 
