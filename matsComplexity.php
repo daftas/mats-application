@@ -166,34 +166,27 @@ class matsComplexity extends matsGeneral
     public function calcPertGamma()
     {
         $scored = $this->calcComplexityPercentage();
-        $diff = matsGeneral::COEFFICIENT_TESTING_EFFORT_MAX - matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
-        return ($scored * $diff) + matsGeneral::COEFFICIENT_TESTING_EFFORT_MIN;
+        $diff = matsGeneral::COEFFICIENT_PERT_GAMMA_MAX - matsGeneral::COEFFICIENT_PERT_GAMMA_MIN;
+        return ((1-$scored) * $diff) + matsGeneral::COEFFICIENT_PERT_GAMMA_MIN;
     }
 
     /**
      * @param int $est
      * @return float|int
      */
-    public function runMonteCarlo($est = 0, $mc = self::NUMBER_MONTE_CARLO_TRIALS, $yI = 4)
+    public function runMonteCarlo($est = 0, $mc = self::NUMBER_MONTE_CARLO_TRIALS)
     {
         $min = $_GET[self::NAME_BEST_CASE_TIME];
         $max = $_GET[self::NAME_WORST_CASE_TIME];
         $y = $this->calcPertGamma();
-        $y = $yI;
         $stdDev = ($max - $min) / ($y + 2);
         $a = array();
-        $b = array();
         $i = 0;
-
 
         while ($i++ < $mc) {
             $pure = $this->generateGaussianNumber($min, $max, $stdDev);
-            $avg = ($min + ($y*$pure) + $max) / ($y + 2);
-            array_push($a, intval($avg));
-            array_push($b, intval($pure));
+            array_push($a, $pure);
         }
-        $countA = array_count_values($a);
-        $modeB = array_search(max($countA),$countA);
         $averageB = (array_sum($a)/count($a));
         $minB = min($a);
         $maxB = max($a);
@@ -203,7 +196,7 @@ class matsComplexity extends matsGeneral
         {
             return $optimalB;
         } else {
-            return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$averageB}</td><td>{$minB}</td><td>{$maxB}</td><td>{$optimalB}</td><td>{$stdevB}</td><td>{$modeB}</td>";
+            return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$averageB}</td><td>{$minB}</td><td>{$maxB}</td><td>{$optimalB}</td><td>{$stdevB}</td>";
         }
     }
 
@@ -213,7 +206,7 @@ class matsComplexity extends matsGeneral
      * @param $stdDev
      * @return float|int
      */
-    private function generateGaussianNumber($min, $max, $stdDev)
+    public function generateGaussianNumber($min, $max, $stdDev)
     {
         $rand1 = (float)mt_rand()/(float)mt_getrandmax();
         $rand2 = (float)mt_rand()/(float)mt_getrandmax();

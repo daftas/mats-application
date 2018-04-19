@@ -37,10 +37,11 @@ $matsScore = new matsScore();
 <h3>Project information:</h3><br>
 <div>Using three point estimate, your most likely project time estimation is: <?php echo($matsComplexity->runMonteCarlo(1,1));?> days</div><br>
 <div>System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
-<div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calculatePertGamma();?></div>
+<div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calcPertGamma();?></div>
 <div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
 <div>Total complexity points: <?php echo $matsComplexity->getComplexityPoints();?></div>
 <div>Total available points: <?php echo $matsComplexity->getTotalAvailableComplexityPoints();?></div>
+<div>test: <?php $o = 0; $a = array(); while ($o++ < 17) { $v = $matsComplexity->generateGaussianNumber(0.1518,0.38203,14.33962); echo ("{$v}; "); array_push($a,$v);} echo (array_sum($a));?></div>
 <hr>
 <h3>Story testing estimation:</h3><br>
 <table>
@@ -106,16 +107,16 @@ $matsScore = new matsScore();
         <th>Array mode</th>
     </tr>
     <tr>
-        <td>Estimate using bell curve (y2)</td>
-        <?php $matsComplexity->runMonteCarlo(0,1000,2); ?>
+        <td>Estimate using bell curve (mc 100)</td>
+        <?php $matsComplexity->runMonteCarlo(0,10); ?>
     </tr>
     <tr>
-        <td>Estimate using bell curve (y4)</td>
-        <?php $matsComplexity->runMonteCarlo(0,1000,4); ?>
+        <td>Estimate using bell curve (mc 500)</td>
+        <?php $matsComplexity->runMonteCarlo(0,50); ?>
     </tr>
     <tr>
-        <td>Estimate using bell curve (y6)</td>
-        <?php $matsComplexity->runMonteCarlo(0,1000,6); ?>
+        <td>Estimate using bell curve (mc 1000)</td>
+        <?php $matsComplexity->runMonteCarlo(0,100); ?>
     </tr>
 </table>
 </body>
