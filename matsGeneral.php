@@ -42,15 +42,11 @@ class matsGeneral
     CONST NAME_MID_COMPLEXITY_STORY = 'story_mid';
     CONST NAME_HIGH_COMPLEXITY_STORY = 'story_high';
 
-    CONST NAME_FIBANACI_STORY_POINT_1 = '1sp';
-    CONST NAME_FIBANACI_STORY_POINT_2 = '2sp';
     CONST NAME_FIBANACI_STORY_POINT_3 = '3sp';
     CONST NAME_FIBANACI_STORY_POINT_5 = '5sp';
     CONST NAME_FIBANACI_STORY_POINT_8 = '8sp';
     CONST NAME_FIBANACI_STORY_POINT_13 = '13sp';
-    CONST NAME_FIBANACI_STORY_POINT_21 = '21sp';
-    CONST NAME_FIBANACI_STORY_POINT_34 = '34sp';
-    CONST NAME_FIBANACI_STORY_POINT_55 = '55sp';
+    CONST NAME_FIBANACI_STORY_POINT_20 = '20sp';
 
     CONST COEFFICIENT_FIBANACI_STORY_POINT_1 = 0.1;
     CONST COEFFICIENT_FIBANACI_STORY_POINT_2 = 0.2;
@@ -70,46 +66,6 @@ class matsGeneral
     CONST GAMMA_HIGH_UNCERTAINTY = 2;
 
     CONST NUMBER_MONTE_CARLO_TRIALS = 1000;
-    
-    public function setUp()
-    {
-        $this->setMatsScore(new matsScore);
-        $this->setMatsComplexity(new matsComplexity);
-    }
-    
-    /**
-     * @return matsScore
-     */
-    public function getMatsScore()
-    {
-        return $this->matsScore;
-    }
-
-    /**
-     * @param $matsScore
-     * @return mixed
-     */
-    public function setMatsScore($matsScore)
-    {
-        return $this->matsScore = $matsScore;
-    }
-
-    /**
-     * @return matsComplexity
-     */
-    public function getMatsComplexity()
-    {
-        return $this->matsComplexity;
-    }
-
-    /**
-     * @param $matsComplexity
-     * @return mixed
-     */
-    public function setMatsComplexity($matsComplexity)
-    {
-        return $this->matsComplexity = $matsComplexity;
-    }
 
     /**
      * @param string $input
@@ -132,14 +88,6 @@ class matsGeneral
                     <br>";
         return $pattern;
     }
-
-    /**
-     * @return int
-     */
-    public function getTotalStories()
-    {
-        return $_GET["story_low"] + $_GET["story_mid"] + $_GET["story_high"];
-    }
     
     /**
      * @return float|int
@@ -153,45 +101,52 @@ class matsGeneral
             self::COEFFICIENT_FIBANACI_STORY_POINT_5 * $_GET[self::NAME_FIBANACI_STORY_POINT_5] +
             self::COEFFICIENT_FIBANACI_STORY_POINT_8 * $_GET[self::NAME_FIBANACI_STORY_POINT_8] +
             self::COEFFICIENT_FIBANACI_STORY_POINT_13 * $_GET[self::NAME_FIBANACI_STORY_POINT_13] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[self::NAME_FIBANACI_STORY_POINT_21] +
+            self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[self::NAME_FIBANACI_STORY_POINT_20] +
             self::COEFFICIENT_FIBANACI_STORY_POINT_34 * $_GET[self::NAME_FIBANACI_STORY_POINT_34] +
             self::COEFFICIENT_FIBANACI_STORY_POINT_55 * $_GET[self::NAME_FIBANACI_STORY_POINT_55];
     }
 
     /**
-     * @return string
+     * Calculates weight for each story point
+     * Formula: StoryPoint * Coefficient
+     *
+     * @param $s
+     * @return float|int
      */
-    public function getAppStore()
+    public function getStoryWeight($s)
     {
-        $a = array();
-        $app_store = array(
-            'ios',
-            'android',
-            'other'
-        );
-        foreach ($app_store as $app)
+        switch ($s)
         {
-            if (isset($_GET[$app]))
-            {
-                array_push($a, $app);
-            }
-        }
-        $appStore = implode(", ", $a);
-        return $appStore;
-    }
+            case ($s === self::NAME_FIBANACI_STORY_POINT_1):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_1 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_2):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_2 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_3):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_3 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_5):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_5 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_8):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_8 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_13):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_13 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_20):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_34):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_34 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBANACI_STORY_POINT_55):
+                return self::COEFFICIENT_FIBANACI_STORY_POINT_55 * $_GET[$s];
+                break;
 
-    /**
-     * @return string
-     */
-    public function getLifecycle()
-    {
-        if ($_GET["lifecycle"] === 5)
-        {
-            return "Supportable";
-        }
-        else
-        {
-            return "Non-supportable";
+            default;
+                return print ("\n Story not set");
         }
     }
 }

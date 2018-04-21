@@ -28,18 +28,6 @@ class matsComplexity extends matsGeneral
     }
 
     /**
-     * Method to create a random floater
-     *
-     * @param integer $min
-     * @param integer $max
-     * @return mixed
-     */
-    private function createRandomFloat($min, $max)
-    {
-        return ($min + lcg_value() * (abs($max - $min)));
-    }
-
-    /**
      * Method to get maximum available Complexity Points
      *
      * @return int
@@ -48,6 +36,7 @@ class matsComplexity extends matsGeneral
     {
         return self::POINTS_MAX_COMPLEXITY - self::POINTS_MIN_COMPLEXITY;
     }
+
     /**
      * Method to get complexity points according to inputs
      *
@@ -96,31 +85,6 @@ class matsComplexity extends matsGeneral
 
     /**
      * Method to calculate testing effort according to complexity
-     *
-     * @return float
-     */
-    public function calculateTestingEffort()
-    {
-
-        $percentage = $this->getComplexityPoints() / $this->getTotalAvailableComplexityPoints();
-        switch ($percentage)
-        {
-            case ($percentage <= self::PERCENTAGE_BORDER_MIN_TO_MID):
-                return self::COEFFICIENT_TESTING_EFFORT_MIN;
-                break;
-            case ($percentage > self::PERCENTAGE_BORDER_MIN_TO_MID && $percentage < self::PERCENTAGE_BORDER_MID_TO_MAX):
-                return self::COEFFICIENT_TESTING_EFFORT_MID;
-                break;
-            case ($percentage >= self::PERCENTAGE_BORDER_MID_TO_MAX):
-                return self::COEFFICIENT_TESTING_EFFORT_MAX;
-                break;
-            default;
-                return print ("\n Unable to calculate, complexity points not set");
-        }
-    }
-
-    /**
-     * Method to calculate testing effort according to complexity
      * Calculates testing effort (e)
      *
      * @return float
@@ -133,31 +97,6 @@ class matsComplexity extends matsGeneral
     }
 
     /**
-     * Method to calculate gamma used for calculation
-     *
-     * @return float
-     */
-    public function calculatePertGamma()
-    {
-        $value = $this->calculateTestingEffort();
-        switch ($value)
-        {
-            case ($value === self::COEFFICIENT_TESTING_EFFORT_MIN):
-                return self::GAMMA_LOW_UNCERTAINTY;
-                break;
-            case ($value === self::COEFFICIENT_TESTING_EFFORT_MID):
-                return self::GAMMA_MID_UNCERTAINTY;
-                break;
-            case ($value === self::COEFFICIENT_TESTING_EFFORT_MAX):
-                return self::GAMMA_HIGH_UNCERTAINTY;
-                break;
-            default;
-                return print ("\n Unable to calculate, complexity points not set");
-        }
-    }
-
-
-    /**
      * Method to calculate testing effort according to complexity
      * Calculates gamma (y)
      *
@@ -168,55 +107,6 @@ class matsComplexity extends matsGeneral
         $scored = $this->calcComplexityPercentage();
         $diff = matsGeneral::COEFFICIENT_PERT_GAMMA_MAX - matsGeneral::COEFFICIENT_PERT_GAMMA_MIN;
         return ((1-$scored) * $diff) + matsGeneral::COEFFICIENT_PERT_GAMMA_MIN;
-    }
-
-    /**
-     * @param int $est
-     * @return float|int
-     */
-    public function runMonteCarlo($est = 0, $mc = self::NUMBER_MONTE_CARLO_TRIALS)
-    {
-        $min = $_GET[self::NAME_BEST_CASE_TIME];
-        $max = $_GET[self::NAME_WORST_CASE_TIME];
-        $y = $this->calcPertGamma();
-        $stdDev = ($max - $min) / ($y + 2);
-        $a = array();
-        $i = 0;
-
-        while ($i++ < $mc) {
-            $pure = $this->generateGaussianNumber($min, $max, $stdDev);
-            array_push($a, $pure);
-        }
-        $averageB = (array_sum($a)/count($a));
-        $minB = min($a);
-        $maxB = max($a);
-        $optimalB = round((($minB + ($y * $averageB) + $maxB) / ($y + 2)),2);
-        $stdevB = ($maxB - $minB) / ($y + 2);
-        if ($est === 1)
-        {
-            return $optimalB;
-        } else {
-            return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$averageB}</td><td>{$minB}</td><td>{$maxB}</td><td>{$optimalB}</td><td>{$stdevB}</td>";
-        }
-    }
-
-    /**
-     * @param $min
-     * @param $max
-     * @param $stdDev
-     * @return float|int
-     */
-    public function generateGaussianNumber($min, $max, $stdDev)
-    {
-        $rand1 = (float)mt_rand()/(float)mt_getrandmax();
-        $rand2 = (float)mt_rand()/(float)mt_getrandmax();
-        $gaussianNumber = sqrt(-2 * log($rand1)) * cos(2 * M_PI * $rand2);
-        $mean = ($max + $min) / 2;
-        $randomNumber = round((($gaussianNumber * $stdDev) + $mean),2);
-        if($randomNumber < $min || $randomNumber > $max) {
-            $randomNumber = $this->generateGaussianNumber($min, $max,$stdDev);
-        }
-        return $randomNumber;
     }
 
 }

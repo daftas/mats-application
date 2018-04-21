@@ -11,6 +11,7 @@ require_once("matsScore.php");
 $matsGeneral = new matsGeneral();
 $matsComplexity = new matsComplexity();
 $matsScore = new matsScore();
+$a = $matsScore->runMonteCarloProject();
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,13 +36,22 @@ $matsScore = new matsScore();
 </head>
 <body>
 <h3>Project information:</h3><br>
-<div>Using three point estimate, your most likely project time estimation is: <?php echo($matsComplexity->runMonteCarlo(1,1));?> days</div><br>
 <div>System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
+<div>Total complexity points for this project: <?php echo $matsComplexity->getComplexityPoints();?></div>
 <div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calcPertGamma();?></div>
 <div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
-<div>Total complexity points: <?php echo $matsComplexity->getComplexityPoints();?></div>
-<div>Total available points: <?php echo $matsComplexity->getTotalAvailableComplexityPoints();?></div>
-<div>test: <?php $o = 0; $a = array(); while ($o++ < 17) { $v = $matsComplexity->generateGaussianNumber(0.1518,0.38203,14.33962); echo ("{$v}; "); array_push($a,$v);} echo (array_sum($a));?></div>
+<h3>Detail project estimation:</h3><br>
+<table>
+    <tr>
+        <th>Minimum estimated project time</th>
+        <th>Maximum estimated project time</th>
+        <th>Standard deviation</th>
+        <th>Most likely project estimation</th>
+    </tr>
+    <tr>
+        <?php $matsScore->calcProjectEstimate($a); ?>
+
+</table>
 <hr>
 <h3>Story testing estimation:</h3><br>
 <table>
@@ -54,70 +64,27 @@ $matsScore = new matsScore();
         <th>Single story time allocated</th>
         <th>Single story test time allocated</th>
     </tr>
-    <tr>
-        <td>1</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_1); ?>
-    </tr>
-    <tr>
-        <td>2</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_2); ?>
-    </tr>
-    <tr>
-        <td>3</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_3); ?>
-    </tr>
-    <tr>
-        <td>5</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_5); ?>
-    </tr>
-    <tr>
-        <td>8</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_8); ?>
-    </tr>
-    <tr>
-        <td>13</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_13); ?>
-    </tr>
-    <tr>
-        <td>21</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_21); ?>
-    </tr>
-    <tr>
-        <td>34</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_34); ?>
-    </tr>
-    <tr>
-        <td>55</td>
-        <?php $matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_55); ?>
-    </tr>
+<!--    <tr>-->
+<!--        <td>3</td>-->
+<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_3); ?>
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>5</td>-->
+<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_5); ?>
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>8</td>-->
+<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_8); ?>
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>13</td>-->
+<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_13); ?>
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>21</td>-->
+<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_20); ?>
+<!--    </tr>-->
 </table>
 <hr>
-<h3>Detail project estimation:</h3><br>
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Original minimum</th>
-        <th>Original maximum</th>
-        <th>Original std.dev</th>
-        <th>Normal average</th>
-        <th>Normal minimum</th>
-        <th>Normal maximum</th>
-        <th>Normal calculated optimal est</th>
-        <th>Normal std.dev</th>
-        <th>Array mode</th>
-    </tr>
-    <tr>
-        <td>Estimate using bell curve (mc 100)</td>
-        <?php $matsComplexity->runMonteCarlo(0,10); ?>
-    </tr>
-    <tr>
-        <td>Estimate using bell curve (mc 500)</td>
-        <?php $matsComplexity->runMonteCarlo(0,50); ?>
-    </tr>
-    <tr>
-        <td>Estimate using bell curve (mc 1000)</td>
-        <?php $matsComplexity->runMonteCarlo(0,100); ?>
-    </tr>
-</table>
 </body>
 </html>
