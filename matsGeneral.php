@@ -42,21 +42,17 @@ class matsGeneral
     CONST NAME_MID_COMPLEXITY_STORY = 'story_mid';
     CONST NAME_HIGH_COMPLEXITY_STORY = 'story_high';
 
-    CONST NAME_FIBANACI_STORY_POINT_3 = '3sp';
-    CONST NAME_FIBANACI_STORY_POINT_5 = '5sp';
-    CONST NAME_FIBANACI_STORY_POINT_8 = '8sp';
-    CONST NAME_FIBANACI_STORY_POINT_13 = '13sp';
-    CONST NAME_FIBANACI_STORY_POINT_20 = '20sp';
+    CONST NAME_FIBONACCI_STORY_POINT_3 = '3sp';
+    CONST NAME_FIBONACCI_STORY_POINT_5 = '5sp';
+    CONST NAME_FIBONACCI_STORY_POINT_8 = '8sp';
+    CONST NAME_FIBONACCI_STORY_POINT_13 = '13sp';
+    CONST NAME_FIBONACCI_STORY_POINT_20 = '20sp';
 
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_1 = 0.1;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_2 = 0.2;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_3 = 0.03;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_5 = 0.05;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_8 = 0.08;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_13 = 0.13;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_21 = 0.20;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_34 = 3.4;
-    CONST COEFFICIENT_FIBANACI_STORY_POINT_55 = 5.5;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_3 = 0.03;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_5 = 0.05;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_8 = 0.08;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_13 = 0.13;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_20 = 0.20;
     
     CONST NAME_BEST_CASE_TIME = 'est_bc';
     CONST NAME_WORST_CASE_TIME = 'est_wc';
@@ -95,15 +91,11 @@ class matsGeneral
     public function getTotalStoryPointsWeight()
     {
         return
-            self::COEFFICIENT_FIBANACI_STORY_POINT_1 * $_GET[self::NAME_FIBANACI_STORY_POINT_1] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_2 * $_GET[self::NAME_FIBANACI_STORY_POINT_2] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_3 * $_GET[self::NAME_FIBANACI_STORY_POINT_3] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_5 * $_GET[self::NAME_FIBANACI_STORY_POINT_5] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_8 * $_GET[self::NAME_FIBANACI_STORY_POINT_8] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_13 * $_GET[self::NAME_FIBANACI_STORY_POINT_13] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[self::NAME_FIBANACI_STORY_POINT_20] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_34 * $_GET[self::NAME_FIBANACI_STORY_POINT_34] +
-            self::COEFFICIENT_FIBANACI_STORY_POINT_55 * $_GET[self::NAME_FIBANACI_STORY_POINT_55];
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_3 * $_GET[self::NAME_FIBONACCI_STORY_POINT_3] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_5 * $_GET[self::NAME_FIBONACCI_STORY_POINT_5] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_8 * $_GET[self::NAME_FIBONACCI_STORY_POINT_8] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_13 * $_GET[self::NAME_FIBONACCI_STORY_POINT_13] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_20 * $_GET[self::NAME_FIBONACCI_STORY_POINT_20];
     }
 
     /**
@@ -117,32 +109,20 @@ class matsGeneral
     {
         switch ($s)
         {
-            case ($s === self::NAME_FIBANACI_STORY_POINT_1):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_1 * $_GET[$s];
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_3):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_3 * $_GET[$s];
                 break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_2):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_2 * $_GET[$s];
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_5):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_5 * $_GET[$s];
                 break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_3):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_3 * $_GET[$s];
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_8):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_8 * $_GET[$s];
                 break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_5):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_5 * $_GET[$s];
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_13):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_13 * $_GET[$s];
                 break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_8):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_8 * $_GET[$s];
-                break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_13):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_13 * $_GET[$s];
-                break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_20):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_21 * $_GET[$s];
-                break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_34):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_34 * $_GET[$s];
-                break;
-            case ($s === self::NAME_FIBANACI_STORY_POINT_55):
-                return self::COEFFICIENT_FIBANACI_STORY_POINT_55 * $_GET[$s];
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_20):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_20 * $_GET[$s];
                 break;
 
             default;

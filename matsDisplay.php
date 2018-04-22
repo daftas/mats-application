@@ -40,6 +40,7 @@ $a = $matsScore->runMonteCarloProject();
 <div>Total complexity points for this project: <?php echo $matsComplexity->getComplexityPoints();?></div>
 <div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calcPertGamma();?></div>
 <div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
+<hr>
 <h3>Detail project estimation:</h3><br>
 <table>
     <tr>
@@ -47,44 +48,21 @@ $a = $matsScore->runMonteCarloProject();
         <th>Maximum estimated project time</th>
         <th>Standard deviation</th>
         <th>Most likely project estimation</th>
+        <th>Probability for a project to end on this day:</th>
     </tr>
     <tr>
-        <?php $matsScore->calcProjectEstimate($a); ?>
-
-</table>
+        <?php $matsScore->calcProjectProbability($a); ?>
 <hr>
 <h3>Story testing estimation:</h3><br>
 <table>
     <tr>
-        <th>Fibanaci story point</th>
-        <th>Total story count</th>
-        <th>Story weight (fib * story count)</th>
-        <th>Normalized numbers</th>
-        <th>Effort coefficient for one story (normal / story count)</th>
-        <th>Single story time allocated</th>
-        <th>Single story test time allocated</th>
+        <th>Fibonacci story point</th>
+        <th>Story count</th>
+        <th>Normalized number</th>
+        <th>Range of each story testing</th>
+        <th>Average test time of each story</th>
     </tr>
-<!--    <tr>-->
-<!--        <td>3</td>-->
-<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_3); ?>
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>5</td>-->
-<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_5); ?>
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>8</td>-->
-<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_8); ?>
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>13</td>-->
-<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_13); ?>
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>21</td>-->
-<!--        --><?php //$matsScore->calculateStoryTestingTime($matsGeneral::NAME_FIBANACI_STORY_POINT_20); ?>
-<!--    </tr>-->
-</table>
+        <?php $matsScore->calcProjectStories($a); ?>
 <hr>
 </body>
 </html>
