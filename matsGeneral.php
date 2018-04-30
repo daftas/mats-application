@@ -61,7 +61,7 @@ class matsGeneral
     CONST GAMMA_MID_UNCERTAINTY = 3;
     CONST GAMMA_HIGH_UNCERTAINTY = 2;
 
-    CONST NUMBER_MONTE_CARLO_TRIALS = 1000;
+    CONST NUMBER_MONTE_CARLO_TRIALS = 5000;
 
     /**
      * @param string $input

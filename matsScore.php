@@ -51,10 +51,9 @@ class matsScore extends matsGeneral
         $stdDev = $this->calcStdDev($min, $max);
         $a = array();
         $i = 0;
-
         while ($i++ < matsGeneral::NUMBER_MONTE_CARLO_TRIALS) {
-            $pure = $this->genGaussianNumber($min, $max, $stdDev);
-            array_push($a, intval($pure));
+            $pure = round($this->genGaussianNumber($min, $max, $stdDev));
+            array_push($a, (int)$pure);
         }
 
         return $a;
@@ -166,13 +165,6 @@ class matsScore extends matsGeneral
         $i = 0;
         $st_a = array();
         $st = $this->getTotalStoryPointsWeight();
-        $sp = array(
-            matsGeneral::NAME_FIBONACCI_STORY_POINT_3,
-            matsGeneral::NAME_FIBONACCI_STORY_POINT_5,
-            matsGeneral::NAME_FIBONACCI_STORY_POINT_8,
-            matsGeneral::NAME_FIBONACCI_STORY_POINT_13,
-            matsGeneral::NAME_FIBONACCI_STORY_POINT_20
-        );
 
         $sp3_a = array();
         $sp3_c = $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_3];
@@ -246,7 +238,6 @@ class matsScore extends matsGeneral
                 array_push($sp20_a, $gauss);
                 array_push($aa, $gauss);
             }
-            $ii = 0;
             array_push($st_a,array_sum($aa));
         }
 
