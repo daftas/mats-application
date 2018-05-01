@@ -7,95 +7,88 @@
 
 class matsGeneral
 {
-    /**
-     * @var matsScore
-     */
-    var $matsScore;
 
-    /**
-     * @var matsMonteCarlo
-     */
-    var $matsMonteCarlo;
+    CONST POINTS_MIN_COMPLEXITY = 3;
+    CONST POINTS_MAX_COMPLEXITY = 35;
+
+    CONST COEFFICIENT_TESTING_EFFORT_MIN = 0.2;
+    CONST COEFFICIENT_TESTING_EFFORT_MAX = 0.4;
+
+    CONST COEFFICIENT_PERT_GAMMA_MIN = 2;
+    CONST COEFFICIENT_PERT_GAMMA_MAX = 6;
+
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_3 = 0.03;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_5 = 0.05;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_8 = 0.08;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_13 = 0.13;
+    CONST COEFFICIENT_FIBONACCI_STORY_POINT_20 = 0.20;
+
+    CONST NUMBER_MONTE_CARLO_TRIALS = 5000;
+
+    CONST NAME_FIBONACCI_STORY_POINT_3 = '3sp';
+    CONST NAME_FIBONACCI_STORY_POINT_5 = '5sp';
+    CONST NAME_FIBONACCI_STORY_POINT_8 = '8sp';
+    CONST NAME_FIBONACCI_STORY_POINT_13 = '13sp';
+    CONST NAME_FIBONACCI_STORY_POINT_20 = '20sp';
+    CONST NAME_COMPANY = 'company';
+    CONST NAME_INTEGRATION = 'integration';
+    CONST NAME_LIFECYCLE = 'lifecycle';
+    CONST NAME_BEST_CASE_TIME = 'est_bc';
+    CONST NAME_WORST_CASE_TIME = 'est_wc';
+
     
-    public function setUp()
-    {
-        $this->setMatsScore(new matsScore($this));
-        $this->setMatsMonteCarlo(new matsMonteCarlo($this));
-    }
-    
     /**
-     * @return matsScore
+     * @return float|int
      */
-    public function getMatsScore()
+    public function getTotalStoryPointsWeight()
     {
-        return $this->matsScore;
-    }
-
-    /**
-     * @param $matsScore
-     * @return mixed
-     */
-    public function setMatsScore($matsScore)
-    {
-        return $this->matsScore = $matsScore;
+        return
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_3 * $_GET[self::NAME_FIBONACCI_STORY_POINT_3] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_5 * $_GET[self::NAME_FIBONACCI_STORY_POINT_5] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_8 * $_GET[self::NAME_FIBONACCI_STORY_POINT_8] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_13 * $_GET[self::NAME_FIBONACCI_STORY_POINT_13] +
+            self::COEFFICIENT_FIBONACCI_STORY_POINT_20 * $_GET[self::NAME_FIBONACCI_STORY_POINT_20];
     }
 
     /**
-     * @return matsMonteCarlo
+     * Calculates weight for each story point
+     * Formula: StoryPoint * Coefficient
+     *
+     * @param $s
+     * @return float|int
      */
-    public function getMatsMonteCarlo()
+    public function getStoryWeight($s)
     {
-        return $this->matsMonteCarlo;
-    }
-
-    /**
-     * @param $matsMonteCarlo
-     * @return mixed
-     */
-    public function setMatsMonteCarlo($matsMonteCarlo)
-    {
-        return $this->matsMonteCarlo = $matsMonteCarlo;
-    }
-
-    /**
-     * @param string $input
-     * @return mixed
-     */
-    public function getFromInput($input)
-    {
-        $input = $_GET[$input];
-        return $input;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPattern()
-    {
-        $pattern = "You have %s people working;
-                    <br>Your project have %s working days in total;
-                    <br>Your project have %s of project working days dedicated to testing;
-                    <br>Your estimated number of user stories in project is %s;
-                    <br>Your project is %s in complexity;
-                    <br>App Stores for your application: %s.";
-        return $pattern;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAppStore()
-    {
-        $a = array();
-        $appstore = array("iOS", "Android", "Other");
-        foreach ($appstore as $app)
+        switch ($s)
         {
-            if (isset($_GET[$app]))
-            {
-                array_push($a, $app);
-            }
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_3):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_3 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_5):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_5 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_8):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_8 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_13):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_13 * $_GET[$s];
+                break;
+            case ($s === self::NAME_FIBONACCI_STORY_POINT_20):
+                return self::COEFFICIENT_FIBONACCI_STORY_POINT_20 * $_GET[$s];
+                break;
+
+            default;
+                return print ("\n Story not set");
         }
-        $appStore = implode(", ", $a);
-        return $appStore;
+    }
+
+    public function getTotalStoryPointsCount()
+    {
+        return
+            $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_3] +
+            $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_5] +
+            $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_8] +
+            $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_13] +
+            $_GET[matsGeneral::NAME_FIBONACCI_STORY_POINT_20];
     }
 }

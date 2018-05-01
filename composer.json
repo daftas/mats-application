@@ -1,12 +1,23 @@
 {
-    "name": "username/my-php-project",
-    "repositories": [
+    "name": "stats",
+    "version": "1.0.5",
+    "type": "extension",
+    "license": [
+        "PHP License"
+    ],
+    "authors": [
         {
-            "type": "vcs",
-            "url": "https://github.com/appium/php-client"
+            "name": "Andrey Hristov",
+            "email": "andrey@php.net"
+        },
+        {
+            "name": "Sean DuBois",
+            "email": "seande@php.net"
+        },
+        {
+            "name": "Yuji Uchiyama",
+            "email": "uchiyama@php.net"
         }
     ],
-    "require": {
-        "appium/php-client": "dev-master"
-    }
+    "description": "Extension with routines for statistical computation."
 }

@@ -9,7 +9,9 @@ require_once("matsGeneral.php");
 require_once("matsScore.php");
 
 $matsGeneral = new matsGeneral();
+$matsComplexity = new matsComplexity();
 $matsScore = new matsScore();
+$a = $matsScore->runMonteCarloProject();
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,37 +21,50 @@ $matsScore = new matsScore();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MATS Application</title>
-    <h5>
-    <?php
-    print(sprintf(
-        $matsGeneral->getPattern(),
-        $matsGeneral->getFromInput("people"),
-        $matsGeneral->getFromInput("project"),
-        $matsGeneral->getFromInput("testing"),
-        $matsGeneral->getFromInput("story"),
-        $matsGeneral->getFromInput("complexity"),
-        $matsGeneral->getAppStore()));
-    ?>
-    </h5>
-    <hr>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
-<table>
-    <?php
-    print ("<tr><td><b>Investment in product quality: </b></td><td><p>{$matsScore->getTestingInvestment(
-            $matsGeneral->getFromInput("people"), 
-            $matsGeneral->getFromInput("project"),
-            $matsGeneral->getFromInput("testing"))} %</p></td></tr>
-<tr><td><b>Estimated Social Return on Investment: </b></td><td><p>42 %</p></td></tr>
-<tr><td><b>Estimated break even period: </b></td><td><p>150 days</p></td></tr>
-<tr><td><b>Resource cost ratio (Manual vs Automated): </b></td><td><p>1.25 : 1</p></td></tr>");
-    ?>
-</table>
+<h3>Project information:</h3><br>
+<div>System ran <?php echo $matsGeneral::NUMBER_MONTE_CARLO_TRIALS ?> trials of this model for Monte Carlo analysis;</div><br>
+<div>Total complexity points for this project: <?php echo $matsComplexity->getComplexityPoints();?></div>
+<div>Skewness (PERT gamma number) for this project is: <?php echo $matsComplexity->calcPertGamma();?></div>
+<div>Testing effort for the project: <?php echo $matsComplexity->calcTestingEffort();?></div>
 <hr>
-<?php
-print("<h3>Additional information:</h3><br>");
-print ("<div> System ran 1000 trials of this model for Monte Carlo analysis;</div><br>
-<div> </div>");
-?>
+<h3>Detail project estimation:</h3><br>
+<table>
+    <tr>
+        <th>Minimum estimated project time</th>
+        <th>Maximum estimated project time</th>
+        <th>Most likely project estimation</th>
+        <th>Probability for a project to end on this day:</th>
+    </tr>
+    <tr>
+        <?php $matsScore->calcProjectProbability($a); ?>
+<hr>
+<h3>Story testing estimation:</h3><br>
+<table>
+    <tr>
+        <th>Fibonacci story point</th>
+        <th>Story count</th>
+        <th>Normalized number</th>
+        <th>Range of each story testing</th>
+        <th>Average test time of each story</th>
+    </tr>
+        <?php $matsScore->calcProjectStories($a); ?>
+    <br>
+    <div><b>Testing tools and methodologies recommended:</b></div>
+        <?php $matsComplexity->getTestingMethods(); ?>.
+<hr>
 </body>
 </html>
