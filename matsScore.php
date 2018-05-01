@@ -3,7 +3,6 @@
  * matsScore.php
  * @copyright © 2018 Ramunas Andrijauskas
  */
-require_once("matsComplexity.php");
 
 class matsScore extends matsGeneral
 
@@ -59,6 +58,10 @@ class matsScore extends matsGeneral
         return $a;
     }
 
+    /**
+     * @param array $a
+     * @return int
+     */
     public function calcProjectEstimate($a)
     {
         $matsComplexity = new matsComplexity();
@@ -80,7 +83,6 @@ class matsScore extends matsGeneral
         $min = min($a);
         $max = max($a);
         $pert = $this->calcProjectEstimate($a);
-        $stdDev = $this->calcStdDev($max, $min);
 
         $a_c = array_count_values($a);
         ksort($a_c);
@@ -146,8 +148,7 @@ class matsScore extends matsGeneral
         $prob99 = (array_sum($n_c) / matsGeneral::NUMBER_MONTE_CARLO_TRIALS)*100;
         $d99 = key($a_c);;
 
-        return print "<td>{$min}</td><td>{$max}</td><td>{$stdDev}</td><td>{$pert}</td><td>{$prob} %</td></tr></table><br>
-                      <div>Probability to complete on date: {$prob} %</div>
+        return print "<td>{$min}</td><td>{$max}</td><td>{$pert}</td><td>{$prob} %</td></tr></table><br>
                       <div>There is a {$prob70}% chance project will be completed in {$d70} days</div>
                       <div>There is a {$prob80}% chance project will be completed in {$d80} days</div>
                       <div>There is a {$prob90}% chance project will be completed in {$d90} days</div>

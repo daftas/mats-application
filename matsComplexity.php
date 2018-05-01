@@ -28,27 +28,23 @@ class matsComplexity extends matsGeneral
     }
 
     /**
-     * Method to get maximum available Complexity Points
-     *
-     * @return int
-     */
-    public function getTotalAvailableComplexityPoints()
-    {
-        return self::POINTS_MAX_COMPLEXITY - self::POINTS_MIN_COMPLEXITY;
-    }
-
-    /**
-     * Method to get complexity points according to inputs
-     *
      * @return float|int
      */
-    public function getComplexityPoints()
+    private function getAppStorePoints()
     {
         $app = array(
             'ios',
             'android',
             'os_other'
         );
+        return $this->getCheckboxPoints($app);
+    }
+
+    /**
+     * @return float|int
+     */
+    private function getFeaturePoints()
+    {
         $features = array(
             'image',
             'geolocation',
@@ -65,9 +61,29 @@ class matsComplexity extends matsGeneral
             'sync',
             'feature_other'
         );
+        return $this->getCheckboxPoints($features);
+    }
+
+    /**
+     * Method to get maximum available Complexity Points
+     *
+     * @return int
+     */
+    public function getTotalAvailableComplexityPoints()
+    {
+        return self::POINTS_MAX_COMPLEXITY - self::POINTS_MIN_COMPLEXITY;
+    }
+
+    /**
+     * Method to get complexity points according to inputs
+     *
+     * @return float|int
+     */
+    public function getComplexityPoints()
+    {
         return
-            $this->getCheckboxPoints($app) +
-            $this->getCheckboxPoints($features) +
+            $this->getAppStorePoints() +
+            $this->getFeaturePoints() +
             $_GET[self::NAME_COMPANY] +
             $_GET[self::NAME_INTEGRATION] +
             $_GET[self::NAME_LIFECYCLE];
@@ -109,4 +125,52 @@ class matsComplexity extends matsGeneral
         return ((1-$scored) * $diff) + matsGeneral::COEFFICIENT_PERT_GAMMA_MIN;
     }
 
+    /**
+     * @return int
+     */
+    public function getTestingMethods()
+    {
+        $a = array();
+
+        if ( $this->getTotalStoryPointsCount() > 20)
+        {
+            array_push($a, 'Test management tool');
+        }
+
+        if ($_GET[matsGeneral::NAME_LIFECYCLE] === 5)
+        {
+            array_push($a, 'Test automation');
+            array_push ($a, 'Production monitoring tool');
+        }
+
+        if (isset($_GET['data']) ||
+            isset($_GET['animation']) ||
+            isset($_GET['storage']) ||
+            isset($_GET['sync']))
+        {
+            array_push($a, 'Performance testing');
+        }
+
+        if ($_GET[matsGeneral::NAME_INTEGRATION] === 5 || isset($_GET['media']) || isset($_GET['payment']))
+        {
+            array_push($a, 'Integration testing');
+        }
+
+        if ($this->getFeaturePoints() > 6)
+        {
+            array_push($a, 'Unit testing');
+        }
+
+        if ($this->getAppStorePoints() === 6)
+        {
+            array_push($a, 'Testing with multiple mobile devices');
+        }
+
+        if (isset($_GET['geolocation']))
+        {
+            array_push ($a, 'Location and usability testing');
+        }
+
+        return print (implode(";<br>", $a));
+    }
 }

@@ -46,7 +46,6 @@ $a = $matsScore->runMonteCarloProject();
     <tr>
         <th>Minimum estimated project time</th>
         <th>Maximum estimated project time</th>
-        <th>Standard deviation</th>
         <th>Most likely project estimation</th>
         <th>Probability for a project to end on this day:</th>
     </tr>
@@ -63,6 +62,9 @@ $a = $matsScore->runMonteCarloProject();
         <th>Average test time of each story</th>
     </tr>
         <?php $matsScore->calcProjectStories($a); ?>
+    <br>
+    <div><b>Testing tools and methodologies recommended:</b></div>
+        <?php $matsComplexity->getTestingMethods(); ?>.
 <hr>
 </body>
 </html>
