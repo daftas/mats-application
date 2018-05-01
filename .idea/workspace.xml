@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/matsComplexity.php" afterPath="$PROJECT_DIR$/matsComplexity.php" />
-      <change beforePath="$PROJECT_DIR$/matsDisplay.php" afterPath="$PROJECT_DIR$/matsDisplay.php" />
-      <change beforePath="$PROJECT_DIR$/matsGeneral.php" afterPath="$PROJECT_DIR$/matsGeneral.php" />
-      <change beforePath="$PROJECT_DIR$/matsScore.php" afterPath="$PROJECT_DIR$/matsScore.php" />
-    </list>
+    <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/matsScore.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2648">
-              <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
               <folding>
                 <element signature="e#6#72#0#PHP" expanded="true" />
               </folding>
@@ -39,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/matsComplexity.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="657">
-              <caret line="174" column="5" lean-forward="true" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
+              <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
               <folding>
                 <element signature="e#7#78#0#PHP" expanded="true" />
               </folding>
@@ -51,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/matsGeneral.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
-              <caret line="91" column="62" lean-forward="true" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
+              <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
               </folding>
@@ -63,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/matsDisplay.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
                 <marker date="1525164347818" expanded="true" signature="328:347" ph="..." />
@@ -181,11 +175,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.3">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/composer" />
-    </include_path>
-  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.3" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="54" />
     <option name="y" value="-8" />
@@ -398,7 +388,7 @@
       <workItem from="1524926074144" duration="9548000" />
       <workItem from="1525063602935" duration="1604000" />
       <workItem from="1525094580391" duration="1765000" />
-      <workItem from="1525110679504" duration="13919000" />
+      <workItem from="1525110679504" duration="14542000" />
     </task>
     <task id="LOCAL-00001" summary="added files / localhost access">
       <created>1511177199494</created>
@@ -439,7 +429,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246743000" />
+    <option name="totallyTimeSpent" value="247366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,9 +442,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2045204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2045204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.49338478" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.46141124" order="7" side_tool="false" content_ui="tabs" />
@@ -688,7 +677,7 @@
     <entry file="file://$PROJECT_DIR$/matsGeneral.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
-          <caret line="91" column="62" lean-forward="true" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
+          <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
           <folding>
             <element signature="e#7#75#0#PHP" expanded="true" />
           </folding>
@@ -698,7 +687,7 @@
     <entry file="file://$PROJECT_DIR$/matsDisplay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
             <element signature="e#7#75#0#PHP" expanded="true" />
             <marker date="1525164347818" expanded="true" signature="328:347" ph="..." />
@@ -710,7 +699,7 @@
     <entry file="file://$PROJECT_DIR$/matsComplexity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
-          <caret line="174" column="5" lean-forward="true" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
+          <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
           <folding>
             <element signature="e#7#78#0#PHP" expanded="true" />
           </folding>
@@ -720,7 +709,7 @@
     <entry file="file://$PROJECT_DIR$/matsScore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2648">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding>
             <element signature="e#6#72#0#PHP" expanded="true" />
           </folding>
