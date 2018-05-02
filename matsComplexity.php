@@ -137,7 +137,7 @@ class matsComplexity extends matsGeneral
             array_push($a, 'Test management tool');
         }
 
-        if ($_GET[matsGeneral::NAME_LIFECYCLE] === 5)
+        if ($_GET[matsGeneral::NAME_LIFECYCLE] = 5)
         {
             array_push($a, 'Test automation');
             array_push ($a, 'Production monitoring tool');
@@ -151,7 +151,7 @@ class matsComplexity extends matsGeneral
             array_push($a, 'Performance testing');
         }
 
-        if ($_GET[matsGeneral::NAME_INTEGRATION] === 5 || isset($_GET['media']) || isset($_GET['payment']))
+        if ($_GET[matsGeneral::NAME_INTEGRATION] = 5 || isset($_GET['media']) || isset($_GET['payment']))
         {
             array_push($a, 'Integration testing');
         }

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs" />
+    <list default="true" id="d5bcd34c-e45f-4961-bca5-b818f90b5826" name="Default" comment="changed project inputs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/matsComplexity.php" afterPath="$PROJECT_DIR$/matsComplexity.php" />
+      <change beforePath="$PROJECT_DIR$/matsDisplay.php" afterPath="$PROJECT_DIR$/matsDisplay.php" />
+      <change beforePath="$PROJECT_DIR$/matsScore.php" afterPath="$PROJECT_DIR$/matsScore.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="matsScore.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matsScore.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsScore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2648">
-              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+            <state relative-caret-position="4522">
+              <caret line="269" column="52" lean-forward="false" selection-start-line="269" selection-start-column="52" selection-end-line="269" selection-end-column="52" />
               <folding>
                 <element signature="e#6#72#0#PHP" expanded="true" />
               </folding>
@@ -32,20 +37,28 @@
       <file leaf-file-name="matsComplexity.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsComplexity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
-              <folding>
-                <element signature="e#7#78#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="2584">
+              <caret line="155" column="50" lean-forward="false" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matsGeneral.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="matsHome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matsHome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matsGeneral.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matsGeneral.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
+            <state relative-caret-position="425">
+              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
               </folding>
@@ -56,12 +69,11 @@
       <file leaf-file-name="matsDisplay.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matsDisplay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="1071">
+              <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding>
-                <element signature="e#7#75#0#PHP" expanded="true" />
-                <marker date="1525164347818" expanded="true" signature="328:347" ph="..." />
-                <marker date="1525164347818" expanded="true" signature="1761:1959" ph="..." />
+                <marker date="1525277915312" expanded="true" signature="365:384" ph="..." />
+                <marker date="1525277915312" expanded="true" signature="1798:1961" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,10 +165,10 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/matsHome.html" />
-        <option value="$PROJECT_DIR$/matsGeneral.php" />
-        <option value="$PROJECT_DIR$/matsDisplay.php" />
         <option value="$PROJECT_DIR$/matsScore.php" />
+        <option value="$PROJECT_DIR$/matsDisplay.php" />
         <option value="$PROJECT_DIR$/matsComplexity.php" />
+        <option value="$PROJECT_DIR$/matsGeneral.php" />
       </list>
     </option>
   </component>
@@ -198,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -220,6 +231,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,7 +400,15 @@
       <workItem from="1524926074144" duration="9548000" />
       <workItem from="1525063602935" duration="1604000" />
       <workItem from="1525094580391" duration="1765000" />
-      <workItem from="1525110679504" duration="14542000" />
+      <workItem from="1525110679504" duration="14914000" />
+      <workItem from="1525239265075" duration="7000" />
+      <workItem from="1525271715563" duration="1150000" />
+      <workItem from="1525277829629" duration="1137000" />
+      <workItem from="1525280254615" duration="771000" />
+      <workItem from="1525281046172" duration="141000" />
+      <workItem from="1525281207033" duration="524000" />
+      <workItem from="1525281757790" duration="390000" />
+      <workItem from="1525282170949" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="added files / localhost access">
       <created>1511177199494</created>
@@ -429,7 +449,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247366000" />
+    <option name="totallyTimeSpent" value="253563000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,17 +462,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2045204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22216097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.49338478" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.46141124" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19402985" sideWeight="0.46141124" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304904" sideWeight="0.4812569" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30490404" sideWeight="0.4740904" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.47960308" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942432" sideWeight="0.47960308" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40618336" sideWeight="0.49338478" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -609,13 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/installed.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/installed.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -628,7 +643,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -638,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
           <caret line="89" column="50" lean-forward="false" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
           <caret line="139" column="9" lean-forward="false" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,15 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="78" column="9" lean-forward="false" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matsHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,48 +673,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
           <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matsGeneral.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
-          <folding>
-            <element signature="e#7#75#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matsDisplay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="1071">
+          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
           <folding>
-            <element signature="e#7#75#0#PHP" expanded="true" />
-            <marker date="1525164347818" expanded="true" signature="328:347" ph="..." />
-            <marker date="1525164347818" expanded="true" signature="1761:1959" ph="..." />
+            <marker date="1525277915312" expanded="true" signature="365:384" ph="..." />
+            <marker date="1525277915312" expanded="true" signature="1798:1961" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matsHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matsScore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4522">
+          <caret line="269" column="52" lean-forward="false" selection-start-line="269" selection-start-column="52" selection-end-line="269" selection-end-column="52" />
+          <folding>
+            <element signature="e#6#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matsComplexity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#78#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="2584">
+          <caret line="155" column="50" lean-forward="false" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matsScore.php">
+    <entry file="file://$PROJECT_DIR$/matsGeneral.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2648">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state relative-caret-position="425">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding>
-            <element signature="e#6#72#0#PHP" expanded="true" />
+            <element signature="e#7#75#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

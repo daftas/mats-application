@@ -52,6 +52,7 @@ class matsScore extends matsGeneral
         $i = 0;
         while ($i++ < matsGeneral::NUMBER_MONTE_CARLO_TRIALS) {
             $pure = round($this->genGaussianNumber($min, $max, $stdDev));
+            echo ($pure . '; ');
             array_push($a, (int)$pure);
         }
 
@@ -261,12 +262,12 @@ class matsScore extends matsGeneral
         $st_min = min($st_a);
         $st_max = max($st_a);
         $st_opt = round((array_sum($st_a)/count($st_a)),2);
-        print "<tr><td>3</td><td>{$sp3_c}</td><td>{$sp3_n}</td><td>{$sp3_min} - {$sp3_max} days</td><td>{$sp3_opt} days</td></tr>
-               <tr><td>5</td><td>{$sp5_c}</td><td>{$sp5_n}</td><td>{$sp5_min} - {$sp5_max} days</td><td>{$sp5_opt} days</td></tr>
-               <tr><td>8</td><td>{$sp8_c}</td><td>{$sp8_n}</td><td>{$sp8_min} - {$sp8_max} days</td><td>{$sp8_opt} days</td></tr>
-               <tr><td>13</td><td>{$sp13_c}</td><td>{$sp13_n}</td><td>{$sp13_min} - {$sp13_max} days</td><td>{$sp13_opt} days</td></tr>
-               <tr><td>20</td><td>{$sp20_c}</td><td>{$sp20_n}</td><td>{$sp20_min} - {$sp20_max} days</td><td>{$sp20_opt} days</td></tr>
-               <tr><b><td>Total</td><td>{$st_c}</td><td>-</td><td>{$st_min} - {$st_max} days</td><td>{$st_opt} days</td></b></tr></table><br>
+        print "<tr><td>3</td><td>{$sp3_c}</td><td>{$sp3_min} - {$sp3_max} days</td><td>{$sp3_opt} days</td></tr>
+               <tr><td>5</td><td>{$sp5_c}</td><td>{$sp5_min} - {$sp5_max} days</td><td>{$sp5_opt} days</td></tr>
+               <tr><td>8</td><td>{$sp8_c}</td><td>{$sp8_min} - {$sp8_max} days</td><td>{$sp8_opt} days</td></tr>
+               <tr><td>13</td><td>{$sp13_c}</td><td>{$sp13_min} - {$sp13_max} days</td><td>{$sp13_opt} days</td></tr>
+               <tr><td>20</td><td>{$sp20_c}</td><td>{$sp20_min} - {$sp20_max} days</td><td>{$sp20_opt} days</td></tr>
+               <tr><b><td>Total</td><td>{$st_c}</td><td>{$st_min} - {$st_max} days</td><td>{$st_opt} days</td></b></tr></table><br>
                <div>Lowest achieved project test time: {$st_min} days</div>           
                <div>Highest achieved project test time: {$st_max} days</div>";
 
