@@ -7,6 +7,7 @@
 
 require_once("matsGeneral.php");
 require_once("matsScore.php");
+require_once ("matsComplexity.php");
 
 $matsGeneral = new matsGeneral();
 $matsComplexity = new matsComplexity();
@@ -57,7 +58,6 @@ $a = $matsScore->runMonteCarloProject();
     <tr>
         <th>Fibonacci story point</th>
         <th>Story count</th>
-        <th>Normalized number</th>
         <th>Range of each story testing</th>
         <th>Average test time of each story</th>
     </tr>
