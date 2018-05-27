@@ -52,7 +52,6 @@ class matsScore extends matsGeneral
         $i = 0;
         while ($i++ < matsGeneral::NUMBER_MONTE_CARLO_TRIALS) {
             $pure = round($this->genGaussianNumber($min, $max, $stdDev));
-            echo ($pure . '; ');
             array_push($a, (int)$pure);
         }
 
